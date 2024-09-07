@@ -1,0 +1,56 @@
+
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.foto-perfil{
+    width: 60px;
+    height: 60px;
+    border-radius: 25%;
+}
+
+.imagem-navbar {
+    height: 50%;
+    width: 50%;
+}
+
+.offcanvas-custom {
+    max-width: 300px;
+}
+
+.btn-custom {
+    background-color: lightgray;
+    border-color: lightgray;    
+    color: black;
+}
+
+.custom-active
+{
+    color: red;
+}
+
+.opcoes-navbar:hover {
+    color: red;
+}
+
+.red-shadow:focus {
+    box-shadow: 0 0 15px lightcoral;
+    border-color: red;
+}
+
+.fonte-pequena {
+    font-size: 70%;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.escuro {
+    font-weight: 620;
+}
+
+.fonte-menor {
+    font-weight: 400;
+}
+

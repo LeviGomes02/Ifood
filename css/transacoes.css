@@ -1,0 +1,47 @@
+.banco-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.scroll {
+    overflow-x: scroll;
+}
+.table-custom {
+    min-width: 720px;
+}
+
+
+.form-check-input {
+    width: 17px;
+    height: 17px;
+    border: 1px solid;   
+}
+
+.form-check-input:hover {
+    box-shadow: 0 0 10px gray;
+}
+
+.form-check-input:checked {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.form-check-input:focus {
+    border-color: red;
+    box-shadow: 0 0 15px lightcoral;
+    border-radius: 0;
+}
+
+
+.btn-3pontos {
+    border-color: white;
+    border-radius: 35%;
+    background-color: white;
+}
+
+.img-3pontos {
+    height: 15px;
+    width: 15px;
+}
