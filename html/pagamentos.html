@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/nav.css">
-  <link rel="stylesheet" href="./css/transacoes.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/pagamentos.css">
 
 </head>
 
@@ -57,7 +57,7 @@
         aria-labelledby="offcanvasNavbarLabel">
 
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel"><img src="./images/ifood-logo-14.png"
+          <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel"><img src="../images/ifood-logo-14.png"
               class="imagem-navbar" alt=""></h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -69,7 +69,7 @@
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
             <div class="d-flex mb-4">
-              <img class="foto-perfil me-2" src="./images/bistro-ouvidor.jpg" alt="">
+              <img class="foto-perfil me-2" src="../images/bistro-ouvidor.jpg" alt="">
               <li class="navbar-item">
                 <a class="nav-link  negrito " aria-current="page" href="#">
                   Bistrô do Hambúrguer</a>
@@ -95,15 +95,12 @@
               <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bag-plus-fill"></i> Pedidos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcoes-navbar custom-active" href="#"><i class="bi bi-file-text-fill"></i>
-                Transações</a>
+              <a class="nav-link opcoes-navbar custom-active" href="#"><i class="bi bi-credit-card-2-back-fill"></i>
+                Pagamentos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-box-seam-fill"></i> Produtos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-credit-card-2-back-fill"></i> Pagamentos</a>
-            </li>
+            </li>   
             <li class="nav-item">
               <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bell-fill"></i> Notificações</a>
             </li>
@@ -159,8 +156,8 @@
         <thead class="negrito">
           <tr>
             <th></th>
-            <th>Transação</th>
-            <th>Tipo</th>
+            <th>Número do Pedido</th>
+            <th>Pagamento</th>
             <th>Conta</th>
             <th>Valor</th>
             <th>Data</th>
@@ -174,94 +171,14 @@
       </table>
 
 
-      <script>
+      <script type="module">
 
-        const transacoes = [
-          {
-            transacao: '#876364',
-            tipo: 'Saque',
-            conta: '<img src="./images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-            valor: 'R$ 2.423,35',
-            data: '15/06/2024',
-            status: 'Concluída'
-          },
-          {
-            transacao: '#876234',
-            tipo: 'Saque',
-            conta: '<img src="./images/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
-            valor: 'R$ 6.346,35',
-            data: '14/06/2024',
-            status: 'Pendente'
-          },
-          {
-            transacao: '#876164',
-            tipo: 'Saque',
-            conta: '<img src="./images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-            valor: 'R$ 523,99',
-            data: '12/06/2024',
-            status: 'Concluída'
-          },
-          {
-            transacao: '#876012',
-            tipo: 'Saque',
-            conta: '<img src="./images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-            valor: 'R$ 1.140,00',
-            data: '12/06/2024',
-            status: 'Cancelada'
-          },
-          {
-            transacao: '#871536',
-            tipo: 'Transferência',
-            conta: '<img src="./images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-            valor: 'R$ 650,00',
-            data: '10/06/2024',
-            status: 'Concluída'
-          },
-          {
-            transacao: '#871233',
-            tipo: 'Saque',
-            conta: '<img src="./images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-            valor: 'R$ 157,65',
-            data: '9/06/2024',
-            status: 'Concluída'
-          },
-          {
-            transacao: '#870235',
-            tipo: 'Saque',
-            conta: '<img src="./images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-            valor: 'R$ 800,00',
-            data: '7/06/2024',
-            status: 'Pendente'
-          },
-          {
-            transacao: '#869534',
-            tipo: 'Saque',
-            conta: '<img src="./images/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
-            valor: 'R$ 120,50',
-            data: '6/06/2024',
-            status: 'Concluída'
-          },
-          {
-            transacao: '#867453',
-            tipo: 'Saque',
-            conta: '<img src="./images/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
-            valor: 'R$ 50,00',
-            data: '3/06/2024',
-            status: 'Concluída'
-          },
-          {
-            transacao: '#867143',
-            tipo: 'Saque',
-            conta: '<img src="./images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-            valor: 'R$ 1.200,00',
-            data: '1/06/2024',
-            status: 'Cancelada'
-          }
-        ];
+        import {pagamentos} from "../js/mock.js";
+        const data = pagamentos;
 
         function preencherTabela() {
           const tablebody = document.getElementById("table-body")
-          transacoes.forEach(item => {
+          data.forEach(item => {
             let row = `
 
             <tr>
@@ -275,7 +192,7 @@
                 <p class="escuro text-${getStatusClass(item.status)}">${item.status}</p>
               </td>
               <td><button class="btn btn-secondary btn-3pontos negrito " type="button"><img class="img-3pontos"
-                    src="./images/tres-pontos.png" alt="3 pontos"></button></td>
+                    src="../images/tres-pontos.png" alt="3 pontos"></button></td>
             </tr>
             
             `
