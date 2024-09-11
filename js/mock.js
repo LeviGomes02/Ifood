@@ -80,3 +80,12 @@ export const pagamentos = [
       status: 'Cancelada'
     }
   ];
+
+  export const mockData = [
+    { id: 1, tipo: 'pedidos', data: '2024-09-01', hora: '18:30', detalhes: 'Relatório de Pedidos - Padrão', visualizacao: '' },
+    { id: 2, tipo: 'pagamentos', data: '2024-09-02', hora: '18:30',detalhes: 'Relatório de Pagamentos - Padrão', visualizacao: '(Este relatório já foi visualizado.)' },
+    { id: 3, tipo: 'entregas', data: '2024-09-03', hora: '18:30', detalhes: 'Relatório de Entregas - Padrão', visualizacao: '(Este relatório já foi visualizado.)' },
+    { id: 4, tipo: 'despesas', data: '2024-09-04', hora: '18:30', detalhes: 'Relatório de Despesas - Padrão', visualizacao: '(Este relatório já foi visualizado.)' },
+    // Adicione mais dados conforme necessário
+];
+
