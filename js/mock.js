@@ -82,10 +82,77 @@ export const pagamentos = [
   ];
 
   export const mockData = [
-    { id: 1, tipo: 'pedidos', data: '2024-09-01', hora: '18:30', detalhes: 'Relatório de Pedidos - Padrão', visualizacao: '' },
-    { id: 2, tipo: 'pagamentos', data: '2024-09-02', hora: '18:30',detalhes: 'Relatório de Pagamentos - Padrão', visualizacao: '(Este relatório já foi visualizado.)' },
-    { id: 3, tipo: 'entregas', data: '2024-09-03', hora: '18:30', detalhes: 'Relatório de Entregas - Padrão', visualizacao: '(Este relatório já foi visualizado.)' },
-    { id: 4, tipo: 'despesas', data: '2024-09-04', hora: '18:30', detalhes: 'Relatório de Despesas - Padrão', visualizacao: '(Este relatório já foi visualizado.)' },
-    // Adicione mais dados conforme necessário
+     // Pedidos
+     { id: 1, tipo: 'pedidos', data1: '2024-01-03', data2: '2024-01-04', hora1: '10:00', hora2: '12:00', detalhes: 'Pedidos - Janeiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 2, tipo: 'pedidos', data1: '2024-02-05', data2: '2024-02-10', hora1: '09:00', hora2: '10:30', detalhes: 'Pedidos - Fevereiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 3, tipo: 'pedidos', data1: '2024-03-07', data2: '2024-03-09', hora1: '11:30', hora2: '14:00', detalhes: 'Pedidos - Março', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 4, tipo: 'pedidos', data1: '2024-04-01', data2: '2024-04-05', hora1: '13:00', hora2: '15:00', detalhes: 'Pedidos - Abril', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 5, tipo: 'pedidos', data1: '2024-05-12', data2: '2024-05-15', hora1: '08:00', hora2: '09:45', detalhes: 'Pedidos - Maio', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 6, tipo: 'pedidos', data1: '2024-06-03', data2: '2024-06-09', hora1: '16:00', hora2: '17:30', detalhes: 'Pedidos - Junho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 7, tipo: 'pedidos', data1: '2024-07-07', data2: '2024-07-10', hora1: '11:15', hora2: '13:00', detalhes: 'Pedidos - Julho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 8, tipo: 'pedidos', data1: '2024-08-05', data2: '2024-08-09', hora1: '14:45', hora2: '16:30', detalhes: 'Pedidos - Agosto', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 9, tipo: 'pedidos', data1: '2024-09-01', data2: '2024-09-06', hora1: '18:30', hora2: '20:00', detalhes: 'Pedidos - Setembro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 10, tipo: 'pedidos', data1: '2024-10-02', data2: '2024-10-07', hora1: '14:45', hora2: '16:00', detalhes: 'Pedidos - Outubro', visualizacao: '' },
+ 
+     // Pagamentos
+     { id: 11, tipo: 'pagamentos', data1: '2024-01-10', data2: '2024-01-10', hora1: '09:00', hora2: '11:30', detalhes: 'Pagamentos - Janeiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 12, tipo: 'pagamentos', data1: '2024-02-04', data2: '2024-02-04', hora1: '10:00', hora2: '12:15', detalhes: 'Pagamentos - Fevereiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 13, tipo: 'pagamentos', data1: '2024-03-11', data2: '2024-03-11', hora1: '08:30', hora2: '10:45', detalhes: 'Pagamentos - Março', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 14, tipo: 'pagamentos', data1: '2024-04-15', data2: '2024-04-15', hora1: '15:00', hora2: '17:00', detalhes: 'Pagamentos - Abril', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 15, tipo: 'pagamentos', data1: '2024-05-07', data2: '2024-05-07', hora1: '09:15', hora2: '11:45', detalhes: 'Pagamentos - Maio', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 16, tipo: 'pagamentos', data1: '2024-06-09', data2: '2024-06-09', hora1: '13:30', hora2: '15:15', detalhes: 'Pagamentos - Junho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 17, tipo: 'pagamentos', data1: '2024-07-12', data2: '2024-07-12', hora1: '11:45', hora2: '13:15', detalhes: 'Pagamentos - Julho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 18, tipo: 'pagamentos', data1: '2024-08-14', data2: '2024-08-14', hora1: '14:00', hora2: '16:00', detalhes: 'Pagamentos - Agosto', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 19, tipo: 'pagamentos', data1: '2024-09-02', data2: '2024-09-02', hora1: '18:30', hora2: '20:00', detalhes: 'Pagamentos - Setembro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 20, tipo: 'pagamentos', data1: '2024-10-05', data2: '2024-10-05', hora1: '10:15', hora2: '12:45', detalhes: 'Pagamentos - Outubro', visualizacao: '(Este relatório já foi visualizado.)' },
+
+      // Entregas
+     { id: 21, tipo: 'entregas', data1: '2024-01-15', data2: '2024-01-15', hora1: '08:00', hora2: '10:00', detalhes: 'Entregas - Janeiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 22, tipo: 'entregas', data1: '2024-02-11', data2: '2024-02-11', hora1: '09:30', hora2: '11:45', detalhes: 'Entregas - Fevereiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 23, tipo: 'entregas', data1: '2024-03-08', data2: '2024-03-08', hora1: '07:00', hora2: '09:00', detalhes: 'Entregas - Março', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 24, tipo: 'entregas', data1: '2024-04-14', data2: '2024-04-14', hora1: '12:00', hora2: '14:30', detalhes: 'Entregas - Abril', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 25, tipo: 'entregas', data1: '2024-05-20', data2: '2024-05-20', hora1: '10:15', hora2: '12:45', detalhes: 'Entregas - Maio', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 26, tipo: 'entregas', data1: '2024-06-23', data2: '2024-06-23', hora1: '08:45', hora2: '11:00', detalhes: 'Entregas - Junho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 27, tipo: 'entregas', data1: '2024-07-17', data2: '2024-07-17', hora1: '14:00', hora2: '16:15', detalhes: 'Entregas - Julho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 28, tipo: 'entregas', data1: '2024-08-29', data2: '2024-08-29', hora1: '09:30', hora2: '11:45', detalhes: 'Entregas - Agosto', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 29, tipo: 'entregas', data1: '2024-09-03', data2: '2024-09-03', hora1: '11:12', hora2: '15:40', detalhes: 'Entregas - Setembro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 30, tipo: 'entregas', data1: '2024-10-07', data2: '2024-10-07', hora1: '16:00', hora2: '18:30', detalhes: 'Entregas - Outubro', visualizacao: '(Este relatório já foi visualizado.)' },
+
+     // Despesas
+     { id: 31, tipo: 'despesas', data1: '2024-01-22', data2: '2024-01-22', hora1: '15:00', hora2: '17:45', detalhes: 'Despesas - Janeiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 32, tipo: 'despesas', data1: '2024-02-09', data2: '2024-02-09', hora1: '13:15', hora2: '15:45', detalhes: 'Despesas - Fevereiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 33, tipo: 'despesas', data1: '2024-03-14', data2: '2024-03-14', hora1: '10:00', hora2: '12:30', detalhes: 'Despesas - Março', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 34, tipo: 'despesas', data1: '2024-04-07', data2: '2024-04-07', hora1: '09:30', hora2: '12:00', detalhes: 'Despesas - Abril', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 35, tipo: 'despesas', data1: '2024-05-05', data2: '2024-05-05', hora1: '14:00', hora2: '16:15', detalhes: 'Despesas - Maio', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 36, tipo: 'despesas', data1: '2024-06-09', data2: '2024-06-09', hora1: '11:30', hora2: '13:45', detalhes: 'Despesas - Junho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 37, tipo: 'despesas', data1: '2024-07-12', data2: '2024-07-12', hora1: '15:00', hora2: '17:30', detalhes: 'Despesas - Julho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 38, tipo: 'despesas', data1: '2024-08-16', data2: '2024-08-16', hora1: '12:45', hora2: '15:15', detalhes: 'Despesas - Agosto', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 39, tipo: 'despesas', data1: '2024-09-18', data2: '2024-09-18', hora1: '10:15', hora2: '12:45', detalhes: 'Despesas - Setembro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 40, tipo: 'despesas', data1: '2024-10-23', data2: '2024-10-23', hora1: '14:30', hora2: '16:45', detalhes: 'Despesas - Outubro', visualizacao: '(Este relatório já foi visualizado.)' },
+
+      // Pedidos x Entregas
+     { id: 41, tipo: 'pedidos-x-entregas', data1: '2024-01-10', data2: '2024-01-17', hora1: '08:30', hora2: '09:45', detalhes: 'Pedidos x Entregas - Janeiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 42, tipo: 'pedidos-x-entregas', data1: '2024-02-07', data2: '2024-02-14', hora1: '09:15', hora2: '10:30', detalhes: 'Pedidos x Entregas - Fevereiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 43, tipo: 'pedidos-x-entregas', data1: '2024-03-05', data2: '2024-03-12', hora1: '11:00', hora2: '12:45', detalhes: 'Pedidos x Entregas - Março', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 44, tipo: 'pedidos-x-entregas', data1: '2024-04-12', data2: '2024-04-19', hora1: '14:00', hora2: '15:30', detalhes: 'Pedidos x Entregas - Abril', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 45, tipo: 'pedidos-x-entregas', data1: '2024-05-17', data2: '2024-05-24', hora1: '08:45', hora2: '10:15', detalhes: 'Pedidos x Entregas - Maio', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 46, tipo: 'pedidos-x-entregas', data1: '2024-06-11', data2: '2024-06-18', hora1: '13:30', hora2: '15:00', detalhes: 'Pedidos x Entregas - Junho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 47, tipo: 'pedidos-x-entregas', data1: '2024-07-14', data2: '2024-07-21', hora1: '11:00', hora2: '12:30', detalhes: 'Pedidos x Entregas - Julho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 48, tipo: 'pedidos-x-entregas', data1: '2024-08-09', data2: '2024-08-16', hora1: '15:15', hora2: '16:45', detalhes: 'Pedidos x Entregas - Agosto', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 49, tipo: 'pedidos-x-entregas', data1: '2024-09-10', data2: '2024-09-17', hora1: '08:19', hora2: '09:20', detalhes: 'Pedidos x Entregas - Setembro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 50, tipo: 'pedidos-x-entregas', data1: '2024-10-05', data2: '2024-10-12', hora1: '09:30', hora2: '11:00', detalhes: 'Pedidos x Entregas - Outubro', visualizacao: '(Este relatório já foi visualizado.)' },
+
+     // Pedidos x Pagamentos
+     { id: 51, tipo: 'pedidos-x-pagamentos', data1: '2024-01-08', data2: '2024-01-15', hora1: '16:00', hora2: '17:15', detalhes: 'Pedidos x Pagamentos - Janeiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 52, tipo: 'pedidos-x-pagamentos', data1: '2024-02-03', data2: '2024-02-10', hora1: '10:15', hora2: '11:45', detalhes: 'Pedidos x Pagamentos - Fevereiro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 53, tipo: 'pedidos-x-pagamentos', data1: '2024-03-12', data2: '2024-03-19', hora1: '13:00', hora2: '14:30', detalhes: 'Pedidos x Pagamentos - Março', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 54, tipo: 'pedidos-x-pagamentos', data1: '2024-04-09', data2: '2024-04-16', hora1: '15:30', hora2: '17:00', detalhes: 'Pedidos x Pagamentos - Abril', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 55, tipo: 'pedidos-x-pagamentos', data1: '2024-05-19', data2: '2024-05-26', hora1: '09:00', hora2: '10:30', detalhes: 'Pedidos x Pagamentos - Maio', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 56, tipo: 'pedidos-x-pagamentos', data1: '2024-06-21', data2: '2024-06-28', hora1: '14:45', hora2: '16:15', detalhes: 'Pedidos x Pagamentos - Junho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 57, tipo: 'pedidos-x-pagamentos', data1: '2024-07-25', data2: '2024-08-01', hora1: '11:30', hora2: '13:00', detalhes: 'Pedidos x Pagamentos - Julho', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 58, tipo: 'pedidos-x-pagamentos', data1: '2024-08-18', data2: '2024-08-25', hora1: '16:30', hora2: '18:00', detalhes: 'Pedidos x Pagamentos - Agosto', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 59, tipo: 'pedidos-x-pagamentos', data1: '2024-09-10', data2: '2024-09-17', hora1: '18:49', hora2: '19:24', detalhes: 'Pedidos x Pagamentos - Setembro', visualizacao: '(Este relatório já foi visualizado.)' },
+     { id: 60, tipo: 'pedidos-x-pagamentos', data1: '2024-10-06', data2: '2024-10-13', hora1: '12:15', hora2: '13:45', detalhes: 'Pedidos x Pagamentos - Outubro', visualizacao: '(Este relatório já foi visualizado.)' }
+
 ];
 

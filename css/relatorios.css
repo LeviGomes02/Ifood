@@ -14,7 +14,11 @@
 }
 
 .data-tamanho{
-    width: 13vw;
+    width: 100;
+}
+
+.input-largura{
+    min-width: 150px;
 }
 
 .botao-procurar {
@@ -58,17 +62,8 @@
     color: white !important; /* Texto branco no hover */
 }
 
-.btn-primary {
-    background-color: red;
-    border-color: red;
-}
-
-.btn-primary:hover {
+.btn-danger:hover {
     background-color: darkred;
     border-color: darkred;
 }
 
-.btn-primary:active {
-    background-color: #4C0000;
-    border-color: #4C0000;
-}
