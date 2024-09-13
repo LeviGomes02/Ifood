@@ -10,6 +10,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/dashboard.css">
+    <script type="module" src="./js/dashboard.js"></script>
+
+     <!-- chamando a BIBLIOTECA chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -58,7 +62,7 @@
 
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel"><img
-                            src="./images/ifood-logo-14.png" class="imagem-navbar" alt=""></h5>
+                            src="./images/imagem-nav/ifood-logo-14.png" class="imagem-navbar" alt=""></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -69,7 +73,7 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
                         <div class="d-flex mb-4">
-                            <img class="foto-perfil me-2" src="./images/bistro-ouvidor.jpg" alt="">
+                            <img class="foto-perfil me-2" src="./images/imagem-nav/bistro-ouvidor.jpg" alt="">
                             <li class="navbar-item">
                                 <a class="nav-link negrito" aria-current="page" href="#">
                                     Bistrô do Hambúrguer</a>
@@ -88,14 +92,16 @@
                                 Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link opcoes-navbar" href="./html/relatorios.html"><i class="bi bi-file-earmark-bar-graph-fill"></i>
+                            <a class="nav-link opcoes-navbar" href="./html/relatorios.html"><i
+                                    class="bi bi-file-earmark-bar-graph-fill"></i>
                                 Relatórios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bag-plus-fill"></i> Pedidos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link opcoes-navbar" href="./html/pagamentos.html"><i class="bi bi-credit-card-2-back-fill"></i>
+                            <a class="nav-link opcoes-navbar" href="./html/pagamentos.html"><i
+                                    class="bi bi-credit-card-2-back-fill"></i>
                                 Pagamentos</a>
                         </li>
                         <li class="nav-item">
@@ -117,36 +123,9 @@
 
         <div class="container container-fluid">
             <div class="row mt-5 justify-content-center align-items-center">
-              <!-- O conteúdo gerado pelo JavaScript aparecerá aqui -->
+                <!-- conteúdo gerado pelo js  -->
             </div>
-          </div>
-
-        <script>
-            const data = [
-                { title: "Dinheiro em Caixa", value: "R$ 162.532,64" },
-                { title: "Disponível para Saque", value: "R$ 142.865,23" },
-                { title: "Aguardando Liberação", value: "R$ 19.667,41" },
-                { title: "Estornos e Cancelamentos", value: "R$ 835,10" },
-                { title: "Vendas", value: "R$ 57.731,46", percentage: "+24%", percentageClass: "text-success" },
-                { title: "Faturamentos", value: "R$ 37.235,23", percentage: "+17%", percentageClass: "text-success" },
-                { title: "Despesas", value: "R$ 20.496,23", percentage: "-11%", percentageClass: "text-danger" },
-                { title: "Ticket Médio Pedido", value: "R$ 146.52", percentage: "+14%", percentageClass: "text-success" }
-            ];
-
-            const layout = data.map(item => `
-            <div class="col-md-12 col-lg-6 col-xl-3 my-3">
-                <div class="card">
-                    <div class="card-body p-1">
-                        <p class="mb-0 my-1">${item.title}</p>
-                        <h5>R$ ${item.value}</h5>
-                    </div>
-                </div>
-            </div>`).join("")
-
-            document.querySelector(".row").innerHTML=layout
-
-        </script>
-
+        </div>
 
         <div class="d-flex flex-column flex-md-row flex-xl-row mt-4">
 
@@ -154,100 +133,15 @@
 
                 <h6>Pedidos</h6>
 
-
                 <div>
-                    <canvas id="myChart"></canvas>
-                </div>
-
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-                <div class="mt-3">
-
-                    <script>
-                        const ctx = document.getElementById('myChart');
-
-                        new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Oct', 'Nov', 'Des'],
-                                datasets: [{
-                                    label: 'Pedidos',
-                                    data: [350, 320, 400, 450, 500, 480, 520, 530, 490, 510],
-                                    borderWidth: 1,
-                                    backgroundColor: 'rgba(54, 162, 235, 0.6)'
-                                },
-                                {
-                                    label: 'Concluídos',
-                                    data: [320, 290, 360, 410, 460, 434, 460, 500, 456, 470],
-                                    borderWidth: 1,
-                                    backgroundColor: 'rgba(75, 192, 75, 0.6)'
-                                },
-
-                                {
-                                    label: 'Cancelados',
-                                    data: [30, 30, 40, 40, 40, 44, 60, 30, 34, 40],
-                                    borderWidth: 1,
-                                    backgroundColor: 'rgba(255, 99, 132, 0.6)'
-                                }
-                                ]
-                            },
-                            options: {
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
-                                    }
-                                }
-                            }
-                        });
-                    </script>
+                    <!-- gráfico de pedidos  -->
+                    <canvas id="graficoPedidos"></canvas>
                 </div>
 
                 <h6>Faturamento</h6>
-
                 <div>
-                    <canvas id="myChart2"></canvas>
-                </div>
-
-                <div class="teste my-3">
-
-                    <script>
-                        const ctx2 = document.getElementById('myChart2');
-
-                        new Chart(ctx2, {
-                            type: 'bar',
-                            data: {
-                                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Oct', 'Nov', 'Des'],
-                                datasets: [{
-                                    label: 'Saldo',
-                                    data: [16.000, 14.500, 18.000, 20.500, 23.000, 22.000, 24.000, 24.500, 22.500, 23.500],
-                                    borderWidth: 1,
-                                    backgroundColor: 'rgba(54, 162, 235, 0.6)'
-                                },
-                                {
-                                    label: 'Lucro',
-                                    data: [6.400, 5.800, 7.200, 8.200, 9.200, 8.800, 9.600, 9.800, 9.000, 9.400],
-                                    borderWidth: 1,
-                                    backgroundColor: 'rgba(75, 192, 75, 0.6)'
-                                },
-
-                                {
-                                    label: 'Despesas',
-                                    data: [9.600, 8.700, 10.800, 12.300, 13.800, 13.200, 14.400, 14.700, 13.500, 14.100],
-                                    borderWidth: 1,
-                                    backgroundColor: 'rgba(255, 99, 132, 0.6)'
-                                }
-                                ]
-                            },
-                            options: {
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
-                                    }
-                                }
-                            }
-                        });
-                    </script>
+                    <!-- gráfico de Faturamento -->
+                    <canvas id="graficoFaturamento"></canvas>
                 </div>
 
             </div>
@@ -258,7 +152,6 @@
 
                 <table class="table table-hover text-center">
                     <thead class="negrito">
-                    <tbody>
                         <thead class="escuro">
                             <tr>
                                 <th>Números</th>
@@ -267,73 +160,9 @@
                                 <th>Status</th>
                             </tr>
                         </thead>
-                        <tr>
-                            <td>#876364</td>
-                            <td>3</td>
-                            <td>R$158,24</td>
-                            <td class="text-warning">Pendente</td>
-                        </tr>
-                        <tr>
-                            <td>#876368</td>
-                            <td>5</td>
-                            <td>R$234,20</td>
-                            <td class="text-warning">Pendente</td>
-                        </tr>
-                        <tr>
-                            <td>#876612</td>
-                            <td>1</td>
-                            <td>R$87,90</td>
-                            <td class="text-success">Concluído</td>
-                        </tr>
-                        <tr>
-                            <td>#876621</td>
-                            <td>2</td>
-                            <td>R$179,90</td>
-                            <td class="text-danger">Cancelado</td>
-                        </tr>
-                        <tr>
-                            <td>#876724</td>
-                            <td>5</td>
-                            <td>R$245,50</td>
-                            <td class="text-success">Concluído</td>
-                        </tr>
-                        <tr>
-                            <td>#876588</td>
-                            <td>3</td>
-                            <td>R$184,40</td>
-                            <td class="text-success">Concluído</td>
-                        </tr>
-                        <tr>
-                            <td>#871262</td>
-                            <td>8</td>
-                            <td>R$457,20</td>
-                            <td class="text-success">Concluído</td>
-                        </tr>
-                        <tr>
-                            <td>#876954</td>
-                            <td>5</td>
-                            <td>R$264,90</td>
-                            <td class="text-success">Concluído</td>
-                        </tr>
-                        <tr>
-                            <td>#876632</td>
-                            <td>2</td>
-                            <td>R$129,94</td>
-                            <td class="text-success">Concluído</td>
-                        </tr>
-                        <tr>
-                            <td>#875678</td>
-                            <td>1</td>
-                            <td>R$90,20</td>
-                            <td class="text-success">Concluído</td>
-                        </tr>
-                        <tr>
-                            <td>#871262</td>
-                            <td>2</td>
-                            <td>R$135,50</td>
-                            <td class="text-danger">Cancelado</td>
-                        </tr>
-                    </tbody>
+                        <tbody id="tabela-corpo">
+                            <!-- conteúdo gerado pelo js -->
+                        </tbody>
                     </thead>
                 </table>
 
@@ -342,149 +171,10 @@
             <div class="container container-fluid-lg teste-3">
 
                 <h6>Produtos Mais Pedidos</h6>
-
-                <div class="mt-3">
-
-                    <div class="d-flex">
-
-                        <img src="./imagens-dashboard/hamburger.png" alt="Um grande hambúrger com duas carnes dentro">
-
-
-                        <div class="column">
-                            <div class="d-flex">
-                                <p class="ms-2 escuro">Bourbon BBQ Deluxe</p>
-
-                                <p class="ms-2 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </p>
-                            </div>
-
-                            <div class="d-flex">
-                                <div>
-                                    <p class="fonte-pequena ms-2 mb-0">Unidades Vendidas</p>
-                                    <h5 class="ms-2 mt-0">2472</h5>
-                                </div>
-                                <div>
-                                    <p class="fonte-pequena ms-5 mb-0">Preço</p>
-                                    <h5 class="ms-5 mt-0">R$ 87,90</h5>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-
+                <div id="produtos-mais-vendidos">
+                    <!-- conteúdo gerado pelo js -->
                 </div>
-
-                <div class="mt-4">
-
-                    <div class="d-flex">
-                        <img src="./imagens-dashboard/milkshake.png" alt="Um copo de vidro com milkshake de chocolate">
-
-                        <div class="column">
-                            <div class="d-flex">
-                                <p class="ms-2 escuro">Chocolate Heaven</p>
-
-                                <p class="ms-2 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </p>
-                            </div>
-
-                            <div class="d-flex">
-                                <div>
-                                    <p class="fonte-pequena ms-2 mb-0">Unidades Vendidas</p>
-                                    <h5 class="ms-2 mt-0">2151</h5>
-                                </div>
-                                <div>
-                                    <p class="fonte-pequena ms-5 mb-0">Preço</p>
-                                    <h5 class="ms-5 mt-0">R$ 47,90</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-                <div class="mt-4">
-
-                    <div class="d-flex">
-                        <img src="./imagens-dashboard/x-bacon.png" alt="Um grande hambúrguer de bacon">
-
-                        <div class="column">
-                            <div class="d-flex">
-                                <p class="ms-2 escuro">King Mont Bacon</p>
-
-                                <p class="ms-2 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </p>
-                            </div>
-
-                            <div class="d-flex">
-                                <div>
-                                    <p class="fonte-pequena ms-2 mb-0">Unidades Vendidas</p>
-                                    <h5 class="ms-2 mt-0">1436</h5>
-                                </div>
-                                <div>
-                                    <p class="fonte-pequena ms-5 mb-0">Preço</p>
-                                    <h5 class="ms-5 mt-0">R$ 62,90</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="mt-4">
-
-                    <div class="d-flex">
-                        <img src="./imagens-dashboard/batatas.png" alt="Uma porção de batatas fritas">
-
-                        <div class="column">
-                            <div class="d-flex">
-                                <p class="ms-2 escuro">Batatas Apimentadas</p>
-
-                                <p class="ms-2 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
-                                </p>
-                            </div>
-
-                            <div class="d-flex">
-                                <div>
-                                    <p class="fonte-pequena ms-2 mb-0">Unidades Vendidas</p>
-                                    <h5 class="ms-2 mt-0">1291</h5>
-                                </div>
-                                <div>
-                                    <p class="fonte-pequena ms-5 mb-0">Preço</p>
-                                    <h5 class="ms-5 mt-0">R$ 42,90</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
+                
             </div>
 
         </div>
