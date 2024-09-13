@@ -10,6 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/relatorios.css">
+    <script type="module" src="../js/relatorios.js"></script>
 
 </head>
 
@@ -58,7 +59,7 @@
 
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel"><img
-                            src="../images/ifood-logo-14.png" class="imagem-navbar" alt=""></h5>
+                            src="../images/imagem-nav/ifood-logo-14.png" class="imagem-navbar" alt=""></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -69,7 +70,7 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
                         <div class="d-flex mb-4">
-                            <img class="foto-perfil me-2" src="../images/bistro-ouvidor.jpg" alt="">
+                            <img class="foto-perfil me-2" src="../images/imagem-nav/bistro-ouvidor.jpg" alt="">
                             <li class="navbar-item">
                                 <a class="nav-link  negrito " aria-current="page" href="#">
                                     Bistrô do Hambúrguer</a>
@@ -148,78 +149,21 @@
                 </div>
             </div>
 
-            <div class="d-flex botao-produrar">
+            <div>
                 <button class="btn btn-danger" id="procurar" type="button">Procurar</button>
             </div>
-
-            <div id="resultadoContainer"></div>
-
-            <script type="module">
-                import { mockData } from "../js/mock.js";
-
-                document.getElementById('procurar').addEventListener('click', function () {
-                    const tipoRelatorio = document.getElementById('reportSelect').value;
-                    const dataInicial = document.getElementById('dataInicial').value;
-                    const dataFinal = document.getElementById('dataFinal').value;
-
-                    // Filtrar os dados por tipo de relatório e intervalo de data
-                    const dadosFiltrados = mockData.filter(item => {
-                        return item.tipo === tipoRelatorio &&
-                            item.data1 >= dataInicial &&
-                            item.data2 <= dataFinal;
-                    });
-
-                    // Exibir os resultados
-                    const resultadoContainer = document.getElementById('resultadoContainer');
-                    resultadoContainer.innerHTML = ''; // Limpa os resultados anteriores
-
-                    if (dadosFiltrados.length > 0) {
-                        dadosFiltrados.forEach(item => {
-                            const cardDiv = document.createElement('div');
-                            cardDiv.className = 'd-flex m-3';
-
-                            cardDiv.innerHTML = `
-                                <div class="col-12 my-3">
-                                    <div class="card">
-                                        <div class="d-flex card-body p-1 div-arquivo rounded">
-                                            <div class="m-2">
-                                                <img class="foto-arquivo" src="../images/imagem-relatorios/files_7515621.png" alt="Duas folhas de papel">
-                                            </div>
-                                            <div class="my-2">
-                                                <div>
-                                                    <p class="negrito mb-0 my-1">Relatório de ${item.detalhes}</p>
-                                                    <p class="fonte-pequena">${item.visualizacao}</p>
-                                                    <div>
-                                                        <button type="button" class="btn btn-arquivo1">Abrir</button>
-                                                        <button type="button" class="btn btn-arquivo2">Excluir</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="ms-auto">
-                                                <p class="text-end fonte-pequena mb-0 mt-3 me-2 d-none d-lg-block d-xl-block">Emissão: ${item.data1} ${item.hora1}</p>
-                                                <p class="fonte-pequena me-2 d-none d-lg-block d-xl-block">Conclusão: ${item.data2} ${item.hora2}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            `;
-                            resultadoContainer.appendChild(cardDiv);
-                        });
-                    } else {
-                        resultadoContainer.textContent = 'Nenhum resultado encontrado para o período e tipo selecionado.';
-                    }
-                });
-                console.log(mockData);
-            </script>
-
 
             <div id="resultadoContainer" class="mt-4">
                 <!-- Os resultados filtrados serão exibidos aqui -->
             </div>
+
+            <div class="d-flex"></div>
+                <button class="btn btn-danger btn-limpar mb-2" id="limpar" type="button">Limpar</button>
+            </div>
+
         </div>
     </main>
-
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

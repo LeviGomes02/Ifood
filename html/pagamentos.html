@@ -10,7 +10,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/pagamentos.css">
-
+  <script type="module" src="../js/pagamentos.js"></script>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
         aria-labelledby="offcanvasNavbarLabel">
 
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel"><img src="../images/ifood-logo-14.png"
+          <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel"><img src="../images/imagem-nav/ifood-logo-14.png"
               class="imagem-navbar" alt=""></h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -69,7 +69,7 @@
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
             <div class="d-flex mb-4">
-              <img class="foto-perfil me-2" src="../images/bistro-ouvidor.jpg" alt="">
+              <img class="foto-perfil me-2" src="../images/imagem-nav/bistro-ouvidor.jpg" alt="">
               <li class="navbar-item">
                 <a class="nav-link  negrito " aria-current="page" href="#">
                   Bistrô do Hambúrguer</a>
@@ -115,40 +115,7 @@
 
   <main>
     <div class="container">
-      <div class="row mt-5 justify-content-center aling-items-center">
-        <div class="col-md-12 col-lg-6 col-xl-3 my-3">
-          <div class="card">
-            <div class="card-body p-1">
-              <p class="mb-0 my-1 ">Dinheiro em Caixa</p>
-              <h5>R$ 162.532,64</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-6 col-xl-3 my-3">
-          <div class="card">
-            <div class="card-body p-1">
-              <p class="mb-0 my-1">Disponível para Saque</p>
-              <h5>R$ 142.865,23</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-6 col-xl-3 my-3">
-          <div class="card">
-            <div class="card-body p-1">
-              <p class="mb-0 my-1">Aguardando Liberação</p>
-              <h5>R$ 19.667,41</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-6 col-xl-3 my-3">
-          <div class="card">
-            <div class="card-body p-1">
-              <p class="mb-0 my-1">Estornos</p>
-              <h5>R$ 835,10</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="divContainer" class="row mt-5 justify-content-center aling-items-center"></div>
     </div>
     <div class="container container-fluid scroll">
 
@@ -165,52 +132,8 @@
             <th></th>
           </tr>
         </thead>
-        <tbody id="table-body">
-
-        </tbody>
+        <tbody id="table-body"></tbody>
       </table>
-
-
-      <script type="module">
-
-        import {pagamentos} from "../js/mock.js";
-        const data = pagamentos;
-
-        function preencherTabela() {
-          const tablebody = document.getElementById("table-body")
-          data.forEach(item => {
-            let row = `
-
-            <tr>
-              <td><input class="form-check-input rounded-0 " type="checkbox" value="" id="flexCheckDefault"></td>
-              <td class="escuro">${item.transacao}</td>
-              <td>${item.tipo}</td>
-              <td class="escuro">${item.conta}</td>
-              <td>R$ ${item.valor}</td>
-              <td><i class="bi bi-calendar-event-fill text-primary"></i> ${item.data}</td>
-              <td>
-                <p class="escuro text-${getStatusClass(item.status)}">${item.status}</p>
-              </td>
-              <td><button class="btn btn-secondary btn-3pontos negrito " type="button"><img class="img-3pontos"
-                    src="../images/tres-pontos.png" alt="3 pontos"></button></td>
-            </tr>
-            
-            `
-            tablebody.innerHTML += row
-          })
-        }
-        preencherTabela()
-        function getStatusClass(status) {
-          switch (status) {
-            case 'Concluída': return 'success';
-            case 'Pendente': return 'warning';
-            case 'Cancelada': return 'danger';
-            default: return '';
-          }
-        }
-      </script>
-
-
     </div>
   </main>
 

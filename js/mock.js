@@ -1,8 +1,86 @@
+// Dashboard
+export const dadosTabela = [
+  { id: "#876364", quantidade: 3, valor: "R$158,24", status: "Pendente" },
+  { id: "#876368", quantidade: 5, valor: "R$234,20", status: "Pendente" },
+  { id: "#876612", quantidade: 1, valor: "R$87,90", status: "Concluído" },
+  { id: "#876621", quantidade: 2, valor: "R$179,90", status: "Cancelado"},
+  { id: "#876724", quantidade: 5, valor: "R$245,50", status: "Concluído"},
+  { id: "#876588", quantidade: 3, valor: "R$184,40", status: "Concluído"},
+  { id: "#871262", quantidade: 8, valor: "R$457,20", status: "Concluído"},
+  { id: "#876954", quantidade: 5, valor: "R$264,90", status: "Concluído"},
+  { id: "#876632", quantidade: 2, valor: "R$129,94", status: "Concluído"},
+  { id: "#875678", quantidade: 1, valor: "R$90,20", status: "Concluído"},
+  { id: "#871262", quantidade: 2, valor: "R$135,50", status: "Cancelado"}
+];
+
+export const dadosCards = [
+  { title: "Dinheiro em Caixa", value: "R$ 162.532,64" },
+  { title: "Disponível para Saque", value: "R$ 142.865,23" },
+  { title: "Aguardando Liberação", value: "R$ 19.667,41" },
+  { title: "Estornos e Cancelamentos", value: "R$ 835,10" },
+  { title: "Vendas", value: "R$ 57.731,46", percentage: "+24%", percentageClass: "text-success" },
+  { title: "Faturamentos", value: "R$ 37.235,23", percentage: "+17%", percentageClass: "text-success" },
+  { title: "Despesas", value: "R$ 20.496,23", percentage: "-11%", percentageClass: "text-danger" },
+  { title: "Ticket Médio Pedido", value: "R$ 146.52", percentage: "+14%", percentageClass: "text-success" }
+];
+
+export const produtosMaisPedidos = [
+    {
+        nome: "Bourbon BBQ Deluxe",
+        imagem: "./images/imagem-dashboard/hamburger.png",
+        descricaoImagem: "Um grande hambúrger com duas carnes dentro",
+        estrela2: '<i class="bi bi-star-fill"></i>',
+        estrela1: '<i class="bi bi-star-fill"></i>',
+        estrela3: '<i class="bi bi-star-fill"></i>',
+        estrela4: '<i class="bi bi-star-fill"></i>',
+        estrela5: '<i class="bi bi-star-fill"></i>',
+        unidadesVendidas: 2472,
+        preco: "R$ 87,90"
+    },
+    {
+        nome: "Chocolate Heaven",
+        imagem: "./images/imagem-dashboard/milkshake.png",
+        descricaoImagem: "Um copo de vidro com milkshake de chocolate",
+        estrela2: '<i class="bi bi-star-fill"></i>',
+        estrela1: '<i class="bi bi-star-fill"></i>',
+        estrela3: '<i class="bi bi-star-fill"></i>',
+        estrela4: '<i class="bi bi-star-fill"></i>',
+        estrela5: '<i class="bi bi-star-fill"></i>',
+        unidadesVendidas: 2151,
+        preco: "R$ 47,90"
+    },
+    {
+        nome: "King Mont Bacon",
+        imagem: "./images/imagem-dashboard/x-bacon.png",
+        descricaoImagem: "Um grande hambúrguer de bacon",
+        estrela2: '<i class="bi bi-star-fill"></i>',
+        estrela1: '<i class="bi bi-star-fill"></i>',
+        estrela3: '<i class="bi bi-star-fill"></i>',
+        estrela4: '<i class="bi bi-star-fill"></i>',
+        estrela5: '<i class="bi bi-star-half"></i>',
+        unidadesVendidas: 1436,
+        preco: "R$ 62,90"
+    },
+    {
+        nome: "Batatas Apimentadas",
+        imagem: "./images/imagem-dashboard/batatas.png",
+        descricaoImagem: "Uma porção de batatas fritas",
+        estrela2: '<i class="bi bi-star-fill"></i>',
+        estrela1: '<i class="bi bi-star-fill"></i>',
+        estrela3: '<i class="bi bi-star-fill"></i>',
+        estrela4: '<i class="bi bi-star-fill"></i>',
+        estrela5: '<i class="bi bi-star"></i>',
+        unidadesVendidas: 1291,
+        preco: "R$ 42,90"
+    }
+];
+
+// Pagamentos
 export const pagamentos = [
     {
       transacao: '#876364',
       tipo: 'Saque',
-      conta: '<img src="../images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
       valor: 'R$ 2.423,35',
       data: '15/06/2024',
       status: 'Concluída'
@@ -10,7 +88,7 @@ export const pagamentos = [
     {
       transacao: '#876234',
       tipo: 'Saque',
-      conta: '<img src="../images/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
+      conta: '<img src="../images/imagem-pagamentos/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
       valor: 'R$ 6.346,35',
       data: '14/06/2024',
       status: 'Pendente'
@@ -18,7 +96,7 @@ export const pagamentos = [
     {
       transacao: '#876164',
       tipo: 'Saque',
-      conta: '<img src="../images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
       valor: 'R$ 523,99',
       data: '12/06/2024',
       status: 'Concluída'
@@ -26,7 +104,7 @@ export const pagamentos = [
     {
       transacao: '#876012',
       tipo: 'Saque',
-      conta: '<img src="../images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
       valor: 'R$ 1.140,00',
       data: '12/06/2024',
       status: 'Cancelada'
@@ -34,7 +112,7 @@ export const pagamentos = [
     {
       transacao: '#871536',
       tipo: 'Transferência',
-      conta: '<img src="../images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
       valor: 'R$ 650,00',
       data: '10/06/2024',
       status: 'Concluída'
@@ -42,7 +120,7 @@ export const pagamentos = [
     {
       transacao: '#871233',
       tipo: 'Saque',
-      conta: '<img src="../images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
       valor: 'R$ 157,65',
       data: '9/06/2024',
       status: 'Concluída'
@@ -50,7 +128,7 @@ export const pagamentos = [
     {
       transacao: '#870235',
       tipo: 'Saque',
-      conta: '<img src="../images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
       valor: 'R$ 800,00',
       data: '7/06/2024',
       status: 'Pendente'
@@ -58,7 +136,7 @@ export const pagamentos = [
     {
       transacao: '#869534',
       tipo: 'Saque',
-      conta: '<img src="../images/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
+      conta: '<img src="../images/imagem-pagamentos/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
       valor: 'R$ 120,50',
       data: '6/06/2024',
       status: 'Concluída'
@@ -66,7 +144,7 @@ export const pagamentos = [
     {
       transacao: '#867453',
       tipo: 'Saque',
-      conta: '<img src="../images/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
+      conta: '<img src="../images/imagem-pagamentos/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
       valor: 'R$ 50,00',
       data: '3/06/2024',
       status: 'Concluída'
@@ -74,14 +152,24 @@ export const pagamentos = [
     {
       transacao: '#867143',
       tipo: 'Saque',
-      conta: '<img src="../images/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
       valor: 'R$ 1.200,00',
       data: '1/06/2024',
       status: 'Cancelada'
     }
+    
   ];
 
-  export const mockData = [
+export const cardsPagamentos = [
+    { descricao: "Dinheiro em Caixa", valor: "R$ 162.532,64" },
+    { descricao: "Disponível para Saque", valor: "R$ 142.865,23" },
+    { descricao: "Aguardando Liberação", valor: "R$ 19.667,41" },
+    { descricao: "Estornos", valor: "R$ 835,10" }
+];
+
+
+// Relatórios
+  export const dadosRelatorios = [
      // Pedidos
      { id: 1, tipo: 'pedidos', data1: '2024-01-03', data2: '2024-01-04', hora1: '10:00', hora2: '12:00', detalhes: 'Pedidos - Janeiro', visualizacao: '(Este relatório já foi visualizado.)' },
      { id: 2, tipo: 'pedidos', data1: '2024-02-05', data2: '2024-02-10', hora1: '09:00', hora2: '10:30', detalhes: 'Pedidos - Fevereiro', visualizacao: '(Este relatório já foi visualizado.)' },

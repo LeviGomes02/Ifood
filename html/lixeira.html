@@ -212,3 +212,95 @@
     <td><button class="btn btn-secondary btn-3pontos negrito " type="button"><img class="img-3pontos"
           src="./images/tres-pontos.png" alt="3 pontos"></button></td>
   </tr>
+
+
+  export const produtosMaisPedidos = [
+  {
+      nome: "Bourbon BBQ Deluxe",
+      imagem: "./images/imagem-dashboard/hamburger.png",
+      descricaoImagem: "Um grande hambúrger com duas carnes dentro",
+      estrela2: <i class="bi bi-star-fill"></i>,
+      estrela1: <i class="bi bi-star-fill"></i>,
+      estrela3: <i class="bi bi-star-fill"></i>,
+      estrela4: <i class="bi bi-star-fill"></i>,
+      estrela5: <i class="bi bi-star-fill"></i>,
+      unidadesVendidas: 2472,
+      preco: "R$ 87,90"
+  },
+  {
+      nome: "Chocolate Heaven",
+      imagem: "./images/imagem-dashboard/milkshake.png",
+      descricaoImagem: "Um copo de vidro com milkshake de chocolate",
+      estrela2: <i class="bi bi-star-fill"></i>,
+      estrela1: <i class="bi bi-star-fill"></i>,
+      estrela3: <i class="bi bi-star-fill"></i>,
+      estrela4: <i class="bi bi-star-fill"></i>,
+      estrela5: <i class="bi bi-star-fill"></i>,
+      unidadesVendidas: 2151,
+      preco: "R$ 47,90"
+  },
+  {
+      nome: "King Mont Bacon",
+      imagem: "./images/imagem-dashboard/x-bacon.png",
+      descricaoImagem: "Um grande hambúrguer de bacon",
+      estrela2: <i class="bi bi-star-fill"></i>,
+      estrela1: <i class="bi bi-star-fill"></i>,
+      estrela3: <i class="bi bi-star-fill"></i>,
+      estrela4: <i class="bi bi-star-fill"></i>,
+      estrela5: <i class="bi bi-star-half"></i>,
+      unidadesVendidas: 1436,
+      preco: "R$ 62,90"
+  },
+  {
+      nome: "Batatas Apimentadas",
+      imagem: "./images/imagem-dashboard/batatas.png",
+      descricaoImagem: "Uma porção de batatas fritas",
+      estrela2: <i class="bi bi-star-fill"></i>,
+      estrela1: <i class="bi bi-star-fill"></i>,
+      estrela3: <i class="bi bi-star-fill"></i>,
+      estrela4: <i class="bi bi-star-fill"></i>,
+      estrela5: <i class="bi bi-star"></i>,
+      unidadesVendidas: 1291,
+      preco: "R$ 42,90"
+  }
+
+
+  function gerarProdutosMaisPedidos() {
+  
+    const container = document.getElementById('produtos-mais-vendidos'); // Seleciona o contêiner para os produtos
+  
+    produtosMaisPedidos.forEach(produto => {
+        const produtoDiv = document.createElement('div');
+        produtoDiv.className = 'd-flex mt-3'; // Classe para estilo
+  
+        produtoDiv.innerHTML = `
+            <div class="d-flex">
+                <img src="${produto.imagem}" alt="${produto.descricaoImagem}" class="me-3">
+                <div class="column">
+                    <div class="d-flex">
+                        <p class="ms-2 escuro">${produto.nome}</p>
+                        <p class="ms-2 text-warning">
+                            ${(produto.estrelas1)}
+                            ${(produto.estrelas2)}
+                            ${(produto.estrelas3)}
+                            ${(produto.estrelas4)}
+                            ${(produto.estrelas5)}
+                        </p>
+                    </div>
+                    <div class="d-flex">
+                        <div>
+                            <p class="fonte-pequena ms-2 mb-0">Unidades Vendidas</p>
+                            <h5 class="ms-2 mt-0">${produto.unidadesVendidas}</h5>
+                        </div>
+                        <div>
+                            <p class="fonte-pequena ms-5 mb-0">Preço</p>
+                            <h5 class="ms-5 mt-0">${produto.preco}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+  
+        container.appendChild(produtoDiv); // Adiciona o produto ao contêiner
+    });
+  }
