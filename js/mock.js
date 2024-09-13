@@ -167,7 +167,6 @@ export const cardsPagamentos = [
     { descricao: "Estornos", valor: "R$ 835,10" }
 ];
 
-
 // Relatórios
   export const dadosRelatorios = [
      // Pedidos
