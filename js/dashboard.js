@@ -158,8 +158,8 @@ function gerarProdutosMaisPedidos() {
       produtoDiv.className = 'd-flex mt-3'; // Classe para estilo
 
       produtoDiv.innerHTML = `
-          <div class="d-flex">
-              <img src="${produto.imagem}" alt="${produto.descricaoImagem}" class="me-3">
+          <div class="d-flex my-1">
+              <img src="${produto.imagem}" alt="${produto.descricaoImagem}" class="me-3 foto-produto">
               <div class="column">
                   <div class="d-flex">
                       <p class="ms-2 escuro">${produto.nome}</p>

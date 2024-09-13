@@ -1,3 +1,21 @@
 .teste-1 {
     max-width: 450px;
 }
+
+.grafico {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.footer {
+    background-color: lightgray; /* Cor de fundo do footer */
+    color: black; /* Cor do texto do footer */
+    padding: 10px 0; /* Espaçamento interno do footer */
+    text-align: center; /* Alinhamento do texto */
+    height: 45px;
+}
+
+.foto-produto {
+    /* height: 100px;
+    width: 100px; */
+}

@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
     <title>Ifood-Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -12,7 +19,7 @@
     <link rel="stylesheet" href="./css/dashboard.css">
     <script type="module" src="./js/dashboard.js"></script>
 
-     <!-- chamando a BIBLIOTECA chart.js -->
+    <!-- chamando a BIBLIOTECA chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -20,15 +27,8 @@
 <body>
 
     <nav class="navbar bg-body-tertiary fixed-top">
+        
         <div class="container-fluid">
-
-            <!-- Google Fonts -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-                rel="stylesheet">
-
             <a class="navbar-brand " href="#">
                 <h4>Dashboard</h4>
             </a>
@@ -127,58 +127,66 @@
             </div>
         </div>
 
-        <div class="d-flex flex-column flex-md-row flex-xl-row mt-4">
-
-            <div class="container container-fluid-lg teste-1">
-
-                <h6>Pedidos</h6>
-
-                <div>
-                    <!-- gráfico de pedidos  -->
-                    <canvas id="graficoPedidos"></canvas>
+        <div>
+            <div class="container d-flex flex-column flex-lg-row flex-xl-row">
+    
+                <div class="col-12 col-lg-6 col-xl-6">
+                    <h6>Pedidos</h6>    
+                    <div class="grafico">
+                        <!-- gráfico de pedidos  -->
+                        <canvas id="graficoPedidos"></canvas>
+                    </div>
                 </div>
-
-                <h6>Faturamento</h6>
-                <div>
-                    <!-- gráfico de Faturamento -->
-                    <canvas id="graficoFaturamento"></canvas>
+                <div class="col-12 col-lg-6 col-xl-6">
+                    <h6>Faturamento</h6>
+                    <div class="grafico">
+                        <!-- gráfico de Faturamento -->
+                        <canvas id="graficoFaturamento"></canvas>
+                    </div>
                 </div>
-
+    
             </div>
-
-            <div class="container container-fluid-lg teste-2">
-
-                <h6>Pedidos Recentes</h6>
-
-                <table class="table table-hover text-center">
-                    <thead class="negrito">
-                        <thead class="escuro">
-                            <tr>
-                                <th>Números</th>
-                                <th>Produtos</th>
-                                <th>Total</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
+    
+            <div class="d-flex flex-column flex-lg-row flex-xl-row container container-fluid">
+    
+                <div class="container col-12 col-lg-6 col-xl-6 my-3">
+    
+                    <h6>Pedidos Recentes</h6>
+    
+                    <table class="table table-hover text-center">
+                        <thead class="negrito">
+                            <thead class="escuro">
+                                <tr>
+                                    <th>Números</th>
+                                    <th>Produtos</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
                         <tbody id="tabela-corpo">
                             <!-- conteúdo gerado pelo js -->
                         </tbody>
-                    </thead>
-                </table>
-
-            </div>
-
-            <div class="container container-fluid-lg teste-3">
-
-                <h6>Produtos Mais Pedidos</h6>
-                <div id="produtos-mais-vendidos">
-                    <!-- conteúdo gerado pelo js -->
+                        </thead>
+                    </table>
+    
                 </div>
-                
+    
+                <div class="container col-12 col-lg-6 col-xl-6  ms-0 ms-lg-5 ms-xl-5 my-3">
+    
+                    <h6>Produtos Mais Pedidos</h6>
+                    <div id="produtos-mais-vendidos">
+                        <!-- conteúdo gerado pelo js -->
+                    </div>
+    
+                </div>
+    
             </div>
-
         </div>
     </main>
+
+    <!-- <footer class="footer">
+        <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer> -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
