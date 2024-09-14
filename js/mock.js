@@ -1,3 +1,5 @@
+
+
 // Dashboard
 export const dadosTabela = [
   { id: "#876364", quantidade: 3, valor: "R$158,24", status: "Pendente" },
@@ -35,7 +37,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star-fill"></i>',
         unidadesVendidas: 2472,
-        preco: "R$ 29,90"
+        preco: "R$ 87,90"
     },
     {
         nome: "Chocolate Heaven",
@@ -47,7 +49,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star-fill"></i>',
         unidadesVendidas: 2151,
-        preco: "R$ 19,90"
+        preco: "R$ 47,90"
     },
     {
         nome: "King Mont Bacon",
@@ -59,7 +61,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star-half"></i>',
         unidadesVendidas: 1436,
-        preco: "R$ 24,90"
+        preco: "R$ 62,90"
     },
     {
         nome: "Batatas Apimentadas",
@@ -71,7 +73,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star"></i>',
         unidadesVendidas: 1291,
-        preco: "R$ 14,90"
+        preco: "R$ 42,90"
     }
 ];
 
@@ -79,92 +81,85 @@ export const produtosMaisPedidos = [
 export const pagamentos = [
     {
       transacao: '#876364',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-      valor: 'R$ 2.423,35',
-      data: '15/06/2024',
+      valor: 'R$ 120,00',
+      data: '13/06/2024',
+      formaDePagamentos:'<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
       status: 'Concluída'
+      
     },
     {
       transacao: '#876234',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
-      valor: 'R$ 6.346,35',
+      valor: 'R$ 80,00',
       data: '14/06/2024',
-      status: 'Pendente'
+      formaDePagamentos: '<img src="../images/imagem-pagamentos/cartao.jpeg" class="banco-icon" alt=""> Cartão de Crédito',
+      status: 'Em Andamento'
     },
     {
       transacao: '#876164',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-      valor: 'R$ 523,99',
+      valor: 'R$ 88,80',
       data: '12/06/2024',
+      formaDePagamentos:'<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
       status: 'Concluída'
     },
     {
       transacao: '#876012',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-      valor: 'R$ 1.140,00',
+      valor: 'R$ 57,90',
       data: '12/06/2024',
-      status: 'Cancelada'
+      formaDePagamentos:'<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
+      status: 'Estorno'
     },
     {
       transacao: '#871536',
-      tipo: 'Transferência',
-      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-      valor: 'R$ 650,00',
+      valor: 'R$ 91,82',
       data: '10/06/2024',
+      formaDePagamentos: '<img src="../images/imagem-pagamentos/cartao.jpeg" class="banco-icon" alt=""> Cartão de Crédito',
       status: 'Concluída'
     },
     {
       transacao: '#871233',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-      valor: 'R$ 157,65',
-      data: '9/06/2024',
+      valor: 'R$ 73,90',
+      data: '09/06/2024',
+      formaDePagamentos:'<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
       status: 'Concluída'
     },
     {
       transacao: '#870235',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-      valor: 'R$ 800,00',
-      data: '7/06/2024',
-      status: 'Pendente'
+      valor: 'R$ 67,81',
+      valorTaxaIfood: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
+      valorLiquido: 'R$ 800,00',
+      data: '07/06/2024',
+      formaDePagamentos:'<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
+      status: 'Em Andamento'
     },
     {
       transacao: '#869534',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
-      valor: 'R$ 120,50',
-      data: '6/06/2024',
+      valor: 'R$ 46,91',
+      data: '06/06/2024',
+      formaDePagamentos:'<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
       status: 'Concluída'
     },
     {
       transacao: '#867453',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/Itau-logo-0BE09A6D22-seeklogo.com.png" class="banco-icon" alt=""> 01959059-1',
-      valor: 'R$ 50,00',
-      data: '3/06/2024',
+      valor: 'R$ 243,09',
+      data: '03/06/2024',
+      formaDePagamentos: '<img src="../images/imagem-pagamentos/cartao.jpeg" class="banco-icon" alt=""> Cartão de Crédito',
       status: 'Concluída'
     },
     {
       transacao: '#867143',
-      tipo: 'Saque',
-      conta: '<img src="../images/imagem-pagamentos/nubank-95.png" class="banco-icon" alt=""> 60078144-9',
-      valor: 'R$ 1.200,00',
-      data: '1/06/2024',
-      status: 'Cancelada'
+      valor: 'R$ 33,10',
+      data: '01/06/2024',
+      formaDePagamentos:'<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
+      status: 'Estorno'
     }
     
   ];
 
 export const cardsPagamentos = [
-    { descricao: "Dinheiro em Caixa", valor: "R$ 162.532,64" },
-    { descricao: "Disponível para Saque", valor: "R$ 142.865,23" },
-    { descricao: "Aguardando Liberação", valor: "R$ 19.667,41" },
-    { descricao: "Estornos", valor: "R$ 835,10" }
+    { descricao: "Valor Vendido", valor: "R$ 903,43" },
+    { descricao: "Valor Recebido", valor: "R$ 541,43" },
+    { descricao: "Taxa Ifood", valor: "R$ 271,00" },
+    { descricao: "Estornos", valor: "R$ 91,00" }
 ];
 
 // Relatórios
@@ -243,11 +238,3 @@ export const cardsPagamentos = [
 
 ];
 
-// Produtos 
-export const produtos = [
-  { id: 1, nome: "Nome 1", avaliacao: 4, pedidos: 25, status: "Ativo" },
-  { id: 2, nome: "Nome 2", avaliacao: 3, pedidos: 40, status: "Inativo" },
-  { id: 3, nome: "Nome 3", avaliacao: 5, pedidos: 10, status: "Ativo" },
-  { id: 4, nome: "Nome 4", avaliacao: 2, pedidos: 55, status: "Inativo" },
-  { id: 5, nome: "Nome 5", avaliacao: 1, pedidos: 70, status: "Ativo" }
-];
