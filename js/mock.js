@@ -243,3 +243,11 @@ export const cardsPagamentos = [
 
 ];
 
+// Produtos 
+export const produtos = [
+  { id: 1, nome: "Nome 1", avaliacao: 4, pedidos: 25, status: "Ativo" },
+  { id: 2, nome: "Nome 2", avaliacao: 3, pedidos: 40, status: "Inativo" },
+  { id: 3, nome: "Nome 3", avaliacao: 5, pedidos: 10, status: "Ativo" },
+  { id: 4, nome: "Nome 4", avaliacao: 2, pedidos: 55, status: "Inativo" },
+  { id: 5, nome: "Nome 5", avaliacao: 1, pedidos: 70, status: "Ativo" }
+];
