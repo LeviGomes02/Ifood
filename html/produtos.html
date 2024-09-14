@@ -18,6 +18,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/produtos.css">
+  <link type="module" rel="stylesheet" href="../js/produtos.js">
 </head>
 
 <body class="cor-body">
@@ -114,12 +115,12 @@
     </div>
   </nav>
 
-  <main class="distancia ">
+  <main class="distancia">
 
 
     <div class="container d-flex flex-wrap justify-content-center mt-5 gap-2 ">
 
-      <div class="d-flex col-12 col-lg-6 col-xl-5 cards-produtos rounded ">
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
 
         <img src="../images/imagem-dashboard/hamburger.png" alt="Um grande hambúrger com duas carnes dentro">
         <div class="d-column">
@@ -147,7 +148,7 @@
 
       </div>
 
-      <div class="d-flex col-12 col-lg-6 col-xl-5 cards-produtos rounded ">
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
 
         <img src="../images/imagem-dashboard/milkshake.png" alt="Um copo de vidro com milkshake de chocolate">
         <div class="d-column">
@@ -175,7 +176,7 @@
 
       </div>
 
-      <div class="d-flex col-12 col-lg-6 col-xl-5 cards-produtos rounded ">
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
 
         <img src="../images/imagem-dashboard/x-bacon.png" alt="Um grande hambúrguer de bacon">
         <div class="d-column">
@@ -203,7 +204,7 @@
 
       </div>
 
-      <div class="d-flex col-12 col-lg-6 col-xl-5 cards-produtos rounded ">
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
 
         <img src="../images/imagem-dashboard/batatas.png" alt="">
         <div class="d-column">
@@ -232,16 +233,15 @@
       </div>
     </div>
 
-
-    <div class="container mt-5">
-      <table id="tabela-produtos" class="table table-hover text-center">
+    <div class="container overflow-auto">
+      <table id="tabela-produtos" class="table table-hover text-center mt-5 table-custom scroll">
         <thead>
           <tr>
-            <th id="codigo"><a href="#">Código</a></th>
-            <th id="nome"><a href="#">Nome</a></th>
-            <th id="avaliacao"><a href="#">Avaliação</a></th>
-            <th id="preco"><a href="#">Preço</a></th>
-            <th id="vendidos"><a href="#">Vendidos</a></th>
+            <th id="codigo" class="escuro"><a href="#" class="text-danger">Código</a></th>
+            <th id="nome"><a href="#" class="text-danger">Nome</a></th>
+            <th id="avaliacao"><a href="#" class="text-danger">Avaliação</a></th>
+            <th id="preco"><a href="#" class="text-danger">Preço</a></th>
+            <th id="vendidos"><a href="#" class="text-danger">Vendidos</a></th>
           </tr>
         </thead>
         <tbody>
@@ -305,59 +305,327 @@
             <td>R$ 24,90</td>
             <td>1436</td>
           </tr>
+          <tr>
+            <td>005</td>
+            <td>Classic Cheeseburger</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 22,90</td>
+            <td>1987</td>
+          </tr>
+          <tr>
+            <td>006</td>
+            <td>Bacon Burger</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </p>
+            </td>
+            <td>R$ 26,90</td>
+            <td>1743</td>
+          </tr>
+          <tr>
+            <td>007</td>
+            <td>Veggie Burger</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 21,90</td>
+            <td>1428</td>
+          </tr>
+          <tr>
+            <td>008</td>
+            <td>BBQ Pulled Pork Sandwich</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 27,90</td>
+            <td>1147</td>
+          </tr>
+          <tr>
+            <td>009</td>
+            <td>Spicy Chicken Burger</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 24,90</td>
+            <td>1599</td>
+          </tr>
+          <tr>
+            <td>010</td>
+            <td>Truffle Burger</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </p>
+            </td>
+            <td>R$ 34,90</td>
+            <td>837</td>
+          </tr>
+          <tr>
+            <td>011</td>
+            <td>Buffalo Chicken Wings</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 19,90</td>
+            <td>1224</td>
+          </tr>
+          <tr>
+            <td>012</td>
+            <td>Onion Rings</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 12,90</td>
+            <td>1999</td>
+          </tr>
+          <tr>
+            <td>013</td>
+            <td>Sweet Potato Fries</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 14,90</td>
+            <td>1563</td>
+          </tr>
+          <tr>
+            <td>014</td>
+            <td>Mac and Cheese</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 22,90</td>
+            <td>832</td>
+          </tr>
+          <tr>
+            <td>015</td>
+            <td>Classic Caesar Salad</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 18,90</td>
+            <td>1463</td>
+          </tr>
+          <tr>
+            <td>016</td>
+            <td>Coca-Cola</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </p>
+            </td>
+            <td>R$ 5,90</td>
+            <td>2340</td>
+          </tr>
+          <tr>
+            <td>017</td>
+            <td>Sprite</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 5,90</td>
+            <td>1876</td>
+          </tr>
+          <tr>
+            <td>018</td>
+            <td>Suco de Laranja</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 8,90</td>
+            <td>1763</td>
+          </tr>
+          <tr>
+            <td>019</td>
+            <td>Milkshake de Chocolate</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 15,90</td>
+            <td>2194</td>
+          </tr>
+          <tr>
+            <td>020</td>
+            <td>Milkshake de Morango</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 15,90</td>
+            <td>1928</td>
+          </tr>
+          <tr>
+            <td>021</td>
+            <td>Chá Gelado</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 7,90</td>
+            <td>1547</td>
+          </tr>
+          <tr>
+            <td>022</td>
+            <td>Limonada</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 9,90</td>
+            <td>1836</td>
+          </tr>
+          <tr>
+            <td>023</td>
+            <td>Café Gelado</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 12,90</td>
+            <td>1984</td>
+          </tr>
+          <tr>
+            <td>024</td>
+            <td>Água com Gás</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 4,90</td>
+            <td>1438</td>
+          </tr>
+          <tr>
+            <td>025</td>
+            <td>Suco de Limão</td>
+            <td>
+              <p class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </p>
+            </td>
+            <td>R$ 9,90</td>
+            <td>1702</td>
+          </tr>
         </tbody>
       </table>
     </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const table = document.getElementById('tabela-produtos');
-        const headers = table.querySelectorAll('th');
-        let sortDirection = {};
+    <script type="module" src="../js/produtos.js"></script>
 
-        headers.forEach(header => {
-          header.addEventListener('click', () => {
-            const column = header.id;
-            const direction = sortDirection[column] = sortDirection[column] === 'asc' ? 'desc' : 'asc';
-            sortTable(column, direction);
-          });
-        });
-
-        function sortTable(column, direction) {
-          const rows = Array.from(table.querySelectorAll('tbody tr'));
-          const index = Array.from(headers).findIndex(th => th.id === column);
-
-          rows.sort((a, b) => {
-            let valueA, valueB;
-
-            if (column === 'avaliacao') {
-              valueA = getStarRating(a.cells[index]);
-              valueB = getStarRating(b.cells[index]);
-            } else {
-              valueA = a.cells[index].innerText;
-              valueB = b.cells[index].innerText;
-            }
-
-            if (direction === 'asc') {
-              return (valueA > valueB) ? 1 : (valueA < valueB) ? -1 : 0;
-            } else {
-              return (valueA < valueB) ? 1 : (valueA > valueB) ? -1 : 0;
-            }
-          });
-
-          const tbody = table.querySelector('tbody');
-          tbody.innerHTML = '';
-          rows.forEach(row => tbody.appendChild(row));
-        }
-
-        function getStarRating(cell) {
-          const stars = cell.querySelectorAll('.bi-star-fill, .bi-star-half');
-          const fullStars = Array.from(stars).filter(star => star.classList.contains('bi-star-fill')).length;
-          const halfStar = Array.from(stars).some(star => star.classList.contains('bi-star-half'));
-          return fullStars + (halfStar ? 0.5 : 0);
-        }
-      });
-    </script>
   </main>
 
 

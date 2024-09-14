@@ -6,3 +6,11 @@
 .estrelas {
     color: orange;
 }
+
+.table-custom {
+    min-width: 720px;
+}
+
+.scroll {
+    overflow-x: scroll;
+}

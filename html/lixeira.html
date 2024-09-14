@@ -440,3 +440,140 @@
       }
     });
   </script>
+
+
+
+
+
+
+
+
+
+
+  <div class="container mt-5">
+    <table class="table table-hover text-center">
+      <thead>
+        <tr>
+          <th id="codigo"><a href="#">Código</a></th>
+          <th id="nome"><a href="#">Nome</a></th>
+          <th id="avaliacao"><a href="#">Avaliação</a></th>
+          <th id="preco"><a href="#">Preço</a></th>
+          <th id="vendidos"><a href="#">Vendidos</a></th>
+        </tr>
+      </thead>
+      <tbody id="tabela-produtos" >
+
+
+        <tr>
+          <td>001</td>
+          <td>Bourbon BBQ Deluxe</td>
+          <td>
+            <p class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </p>
+          </td>
+          <td>R$ 29,90</td>
+          <td>2472</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Batatas Apimentadas</td>
+          <td>
+            <p class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </p>
+          </td>
+          <td>R$ 14,90</td>
+          <td>1291</td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Chocolate Heaven</td>
+          <td>
+            <p class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </p>
+          </td>
+          <td>R$ 19,90</td>
+          <td>2151</td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>King Mont Bacon</td>
+          <td>
+            <p class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </p>
+          </td>
+          <td>R$ 24,90</td>
+          <td>1436</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const table = document.getElementById('tabela-produtos');
+      const headers = table.querySelectorAll('th');
+      let sortDirection = {};
+
+      headers.forEach(header => {
+        header.addEventListener('click', () => {
+          const column = header.id;
+          const direction = sortDirection[column] = sortDirection[column] === 'asc' ? 'desc' : 'asc';
+          sortTable(column, direction);
+        });
+      });
+
+      function sortTable(column, direction) {
+        const rows = Array.from(table.querySelectorAll('tbody tr'));
+        const index = Array.from(headers).findIndex(th => th.id === column);
+
+        rows.sort((a, b) => {
+          let valueA, valueB;
+
+          if (column === 'avaliacao') {
+            valueA = getStarRating(a.cells[index]);
+            valueB = getStarRating(b.cells[index]);
+          } else {
+            valueA = a.cells[index].innerText;
+            valueB = b.cells[index].innerText;
+          }
+
+          if (direction === 'asc') {
+            return (valueA > valueB) ? 1 : (valueA < valueB) ? -1 : 0;
+          } else {
+            return (valueA < valueB) ? 1 : (valueA > valueB) ? -1 : 0;
+          }
+        });
+
+        const tbody = table.querySelector('tbody');
+        tbody.innerHTML = '';
+        rows.forEach(row => tbody.appendChild(row));
+      }
+
+      function getStarRating(cell) {
+        const stars = cell.querySelectorAll('.bi-star-fill, .bi-star-half');
+        const fullStars = Array.from(stars).filter(star => star.classList.contains('bi-star-fill')).length;
+        const halfStar = Array.from(stars).some(star => star.classList.contains('bi-star-half'));
+        return fullStars + (halfStar ? 0.5 : 0);
+      }
+    });
+  </script>
