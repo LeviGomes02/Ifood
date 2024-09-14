@@ -35,7 +35,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star-fill"></i>',
         unidadesVendidas: 2472,
-        preco: "R$ 87,90"
+        preco: "R$ 29,90"
     },
     {
         nome: "Chocolate Heaven",
@@ -47,7 +47,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star-fill"></i>',
         unidadesVendidas: 2151,
-        preco: "R$ 47,90"
+        preco: "R$ 19,90"
     },
     {
         nome: "King Mont Bacon",
@@ -59,7 +59,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star-half"></i>',
         unidadesVendidas: 1436,
-        preco: "R$ 62,90"
+        preco: "R$ 24,90"
     },
     {
         nome: "Batatas Apimentadas",
@@ -71,7 +71,7 @@ export const produtosMaisPedidos = [
         estrela4: '<i class="bi bi-star-fill"></i>',
         estrela5: '<i class="bi bi-star"></i>',
         unidadesVendidas: 1291,
-        preco: "R$ 42,90"
+        preco: "R$ 14,90"
     }
 ];
 

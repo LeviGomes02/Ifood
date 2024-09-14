@@ -54,3 +54,10 @@ body {
     font-weight: 400;
 }
 
+.distancia {
+    margin-top: 100px;
+}
+
+.cor-body {
+    background-color: #F7F7F7;
+}

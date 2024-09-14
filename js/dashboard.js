@@ -159,7 +159,7 @@ function gerarProdutosMaisPedidos() {
 
       produtoDiv.innerHTML = `
           <div class="d-flex my-1">
-              <img src="${produto.imagem}" alt="${produto.descricaoImagem}" class="me-3 foto-produto">
+              <img src="${produto.imagem}" alt="${produto.descricaoImagem}" class="me-3">
               <div class="column">
                   <div class="d-flex">
                       <p class="ms-2 escuro">${produto.nome}</p>
