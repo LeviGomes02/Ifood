@@ -8,11 +8,12 @@
 }
 
 .table-custom {
-    min-width: 720px;
+    min-width: 700px;
 }
 
 .scroll {
     overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 .btn-produtos:hover {

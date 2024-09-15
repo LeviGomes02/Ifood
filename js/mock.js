@@ -804,4 +804,32 @@ export const dadosRelatorios = [
   },
 ];
 
+// Produtos
+export const mockData = [
+  { codigo: '001', nome: 'Bourbon BBQ Deluxe', avaliacao: 5, preco: 'R$ 29,90', vendidos: 2472 },
+  { codigo: '002', nome: 'Batatas Apimentadas', avaliacao: 4.5, preco: 'R$ 14,90', vendidos: 1291 },
+  { codigo: '003', nome: 'Chocolate Heaven', avaliacao: 5, preco: 'R$ 19,90', vendidos: 2151 },
+  { codigo: '004', nome: 'King Mont Bacon', avaliacao: 4, preco: 'R$ 24,90', vendidos: 1436 },
+  { codigo: '005', nome: 'Classic Cheeseburger', avaliacao: 3.5, preco: 'R$ 22,90', vendidos: 1987 },
+  { codigo: '006', nome: 'Bacon Burger', avaliacao: 4.5, preco: 'R$ 26,90', vendidos: 1743 },
+  { codigo: '007', nome: 'Veggie Burger', avaliacao: 3, preco: 'R$ 21,90', vendidos: 1428 },
+  { codigo: '008', nome: 'BBQ Pulled Pork Sandwich', avaliacao: 4, preco: 'R$ 27,90', vendidos: 1147 },
+  { codigo: '009', nome: 'Spicy Chicken Burger', avaliacao: 3.5, preco: 'R$ 24,90', vendidos: 1599 },
+  { codigo: '010', nome: 'Truffle Burger', avaliacao: 5, preco: 'R$ 34,90', vendidos: 837 },
+  { codigo: '011', nome: 'Buffalo Chicken Wings', avaliacao: 3.5, preco: 'R$ 19,90', vendidos: 1224 },
+  { codigo: '012', nome: 'Onion Rings', avaliacao: 3.5, preco: 'R$ 12,90', vendidos: 1999 },
+  { codigo: '013', nome: 'Sweet Potato Fries', avaliacao: 3.5, preco: 'R$ 14,90', vendidos: 1563 },
+  { codigo: '014', nome: 'Mac and Cheese', avaliacao: 4, preco: 'R$ 22,90', vendidos: 832 },
+  { codigo: '015', nome: 'Classic Caesar Salad', avaliacao: 3, preco: 'R$ 18,90', vendidos: 1463 },
+  { codigo: '016', nome: 'Coca-Cola', avaliacao: 4.5, preco: 'R$ 5,90', vendidos: 2340 },
+  { codigo: '017', nome: 'Sprite', avaliacao: 4, preco: 'R$ 5,90', vendidos: 1876 },
+  { codigo: '018', nome: 'Suco de Laranja', avaliacao: 3.5, preco: 'R$ 8,90', vendidos: 1763 },
+  { codigo: '019', nome: 'Milkshake de Chocolate', avaliacao: 4, preco: 'R$ 15,90', vendidos: 2194 },
+  { codigo: '020', nome: 'Milkshake de Morango', avaliacao: 3.5, preco: 'R$ 15,90', vendidos: 1928 },
+  { codigo: '021', nome: 'Chá Gelado', avaliacao: 3, preco: 'R$ 7,90', vendidos: 1547 },
+  { codigo: '022', nome: 'Limonada', avaliacao: 4, preco: 'R$ 9,90', vendidos: 1836 },
+  { codigo: '023', nome: 'Café Gelado', avaliacao: 3.5, preco: 'R$ 12,90', vendidos: 1984 },
+  { codigo: '024', nome: 'Água com Gás', avaliacao: 3, preco: 'R$ 4,90', vendidos: 1438 },
+  { codigo: '025', nome: 'Suco de Limão', avaliacao: 4, preco: 'R$ 9,90', vendidos: 1702 }
+];
 

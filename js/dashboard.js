@@ -76,7 +76,7 @@ new Chart(ctx, {
       },
       {
         label: "Concluídos",
-        data: [320, 290, 360, 410, 460, 434, 460, 500, 456, 470],
+        data: [320, 290, 360, 410, 460, 434, 460, 500, 456, 420],
         borderWidth: 1,
         backgroundColor: "rgba(75, 192, 75, 0.6)",
       },

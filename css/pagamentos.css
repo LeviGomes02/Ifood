@@ -1,3 +1,30 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    background: #f8f9fa;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.card h5 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
 .banco-icon {
     width: 15px;
     height: 15px;
@@ -46,3 +73,4 @@
     height: 15px;
     width: 15px;
 }
+
