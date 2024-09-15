@@ -118,10 +118,9 @@
   <main class="distancia">
 
 
-    <div class="container d-flex flex-wrap justify-content-center mt-5 gap-2 ">
+    <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center mt-5 gap-2 ">
 
       <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-
         <img src="../images/imagem-dashboard/hamburger.png" alt="Um grande hambúrger com duas carnes dentro">
         <div class="d-column">
           <div class="d-flex">
@@ -231,6 +230,7 @@
         </div>
 
       </div>
+
     </div>
 
     <div class="container overflow-auto">
@@ -622,6 +622,13 @@
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="container my-2">
+      <div class="d-flex gap-2 mx-auto">
+        <button class="btn btn-danger btn-produtos col-5 w-50" type="button"><i class="bi bi-plus-lg"></i> Adicionar</button>
+        <button class="btn btn-danger btn-produtos col-5 w-50" type="button"><i class="bi bi-dash-lg"></i> Remover</button>
+      </div>
     </div>
 
     <script type="module" src="../js/produtos.js"></script>

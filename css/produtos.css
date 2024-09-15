@@ -14,3 +14,8 @@
 .scroll {
     overflow-x: scroll;
 }
+
+.btn-produtos:hover {
+    background-color: darkred;
+    border-color: darkred;  
+}
