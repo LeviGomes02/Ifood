@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <title>Controle de Entregas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/entregas.css">
+  <link type="module" rel="stylesheet" href="../js/produtos.js">
+</head>
+
+<body class="cor-body">
+
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand " href="#">
+        <h4>Gerenciador de Entregas</h4>
+      </a>
+
+      <div class="d-none d-md-flex d-xl-flex w-50 w-md-100 bg-light ">
+        <input class="form-control red-shadow" type="search" placeholder="Procurar" aria-label="Search">
+        <button class="btn btn-outline-danger btn-custom" type="submit"><i class="bi bi-search"></i></button>
+      </div>
+
+      <div class="d-none d-xl-block" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+        <label class="btn btn-danger btn-custom" for="btnradio1">Dia</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-danger btn-custom" for="btnradio2">Semana</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked="">
+        <label class="btn btn-danger btn-custom" for="btnradio3">Mês</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+        <label class="btn btn-danger btn-custom" for="btnradio4">Ano</label>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel"><img
+              src="../images/imagem-nav/ifood-logo-14.png" class="imagem-navbar" alt=""></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+
+
+
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <div class="d-flex mb-4">
+              <img class="foto-perfil me-2" src="../images/imagem-nav/bistro-ouvidor.jpg" alt="">
+              <li class="navbar-item">
+                <a class="nav-link  negrito " aria-current="page" href="#">
+                  Bistrô do Hambúrguer</a>
+                <p class="fonte-pequena mt-0">Conta Premium</p>
+              </li>
+            </div>
+
+            <div class="d-flex d-md-none d-xl-none w-200 bg-light m-2 mb-4 mx-auto">
+              <input class="form-control" type="search" placeholder="Procurar" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+
+            <li class="nav-item">
+              <a class="nav-link opcoes-navbar " aria-current="page" href="../dashboard.html"><i
+                  class="bi bi-grid-fill"></i>
+                Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcoes-navbar" href="./relatorios.html"><i
+                  class="bi bi-file-earmark-bar-graph-fill"></i>
+                Relatórios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bag-plus-fill"></i> Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcoes-navbar" href="./pagamentos.html"><i class="bi bi-credit-card-2-back-fill"></i>
+                Pagamentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcoes-navbar custom-active" href="./produtos.html"><i class="bi bi-box-seam-fill"></i> Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bell-fill"></i> Notificações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-gear-fill"></i> Configurações</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="distancia">
+    <div class="container d-flex justify-content-center">
+      <h4>Melhores Entregadores</h4>
+    </div>
+    <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center mt-5 gap-2 ">
+    
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
+        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
+        <div class="d-column">
+          <div class="d-flex">
+            <h5 class="ms-2">Ricardo Costa</h5>
+            <div class="d-flex ms-3 estrelas">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div>
+              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
+              <h5 class="ms-2 mt-0">272</h5>
+            </div>
+            <div>
+              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
+              <h5 class="ms-5 mt-0">5</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
+        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
+        <div class="d-column">
+          <div class="d-flex">
+            <h5 class="ms-2">Lucas Oliveira</h5>
+            <div class="d-flex ms-3 estrelas">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div>
+              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
+              <h5 class="ms-2 mt-0">215</h5>
+            </div>
+            <div>
+              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
+              <h5 class="ms-5 mt-0">9</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
+
+        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
+        <div class="d-column">
+          <div class="d-flex">
+            <h5 class="ms-2">Carlos Pereira</h5>
+            <div class="d-flex ms-3 estrelas">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i></i>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div>
+              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
+              <h5 class="ms-2 mt-0">136</h5>
+            </div>
+            <div>
+              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
+              <h5 class="ms-5 mt-0">6</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
+
+        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
+        <div class="d-column">
+          <div class="d-flex">
+            <h5 class="ms-2">João da Silva</h5>
+            <div class="d-flex ms-3 estrelas">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i></i>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div>
+              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
+              <h5 class="ms-2 mt-0">121</h5>
+            </div>
+            <div>
+              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
+              <h5 class="ms-5 mt-0">14</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-2">
+      <div class="d-flex justify-content-between mx-auto mt-5">
+        <button type="button" class="btn btn-primary">Gerencidor Entregador</button>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-success">Adicionar Entrega</button>
+          <button type="button" class="btn btn-warning">Editar Entrega</button>
+          <button type="button" class="btn btn-danger">Remover Entrega</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container overflow-auto">
+      <table id="tabela-produtos" class="table table-hover text-center mt-2 table-custom scroll">
+        <thead>
+          <tr>
+            <th id="codigo" class="escuro"><a href="#" class="text-danger">Código da Entrega</a></th>
+            <th id="nome"><a href="#" class="text-danger">Entregador</a></th>
+            <th id="preco"><a href="#" class="text-danger">Avaliação</a></th>
+            <th id="preco"><a href="#" class="text-danger">Endereço de Entrega</a></th>
+            <th id="vendidos"><a href="#" class="text-danger">Data/Hora da Saída</a></th>
+            <th id="avaliacao"><a href="#" class="text-danger">Status</a></th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+    <script type="module" src="../js/produtos.js"></script>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script type="module" src="../js/entregas.js"></script>
+
+</body>
+</html>
