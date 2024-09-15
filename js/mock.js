@@ -833,3 +833,16 @@ export const mockData = [
   { codigo: '025', nome: 'Suco de Limão', avaliacao: 4, preco: 'R$ 9,90', vendidos: 1702 }
 ];
 
+// Entregas
+export const dadosEntregas = [
+  { id: '001', name: 'Ricardo Costa', stars: 5, endereco: 'Rua das Flores, 123', dataHora: '2024-09-15 14:30', status: 'Em Andamento' },
+  { id: '002', name: 'João da Silva', stars: 4, endereco: 'Avenida Central, 456', dataHora: '2024-09-12 09:15', status: 'Concluído' },
+  { id: '003', name: 'Maria Souza', stars: 3, endereco: 'Praça das Águas, 789', dataHora: '2024-09-10 16:45', status: 'Pendente' },
+  { id: '004', name: 'Carlos Pereira', stars: 4, endereco: 'Rua dos Pássaros, 321', dataHora: '2024-09-11 11:30', status: 'Cancelado' },
+  { id: '005', name: 'Ana Clara', stars: 3, endereco: 'Rua do Sol, 654', dataHora: '2024-09-14 13:00', status: 'Concluído' },
+  { id: '006', name: 'Fernando Lima', stars: 1, endereco: 'Avenida dos Ventos, 987', dataHora: '2024-09-13 10:20', status: 'Pendente' },
+  { id: '007', name: 'Lucas Oliveira', stars: 4, endereco: 'Rua das Pedras, 147', dataHora: '2024-09-12 18:40', status: 'Em Andamento' },
+  { id: '008', name: 'Paula Mendes', stars: 3, endereco: 'Avenida das Palmeiras, 258', dataHora: '2024-09-11 08:00', status: 'Concluído' },
+  { id: '009', name: 'Ricardo Costa', stars: 5, endereco: 'Rua das Árvores, 369', dataHora: '2024-09-15 17:25', status: 'Em Andamento' },
+  { id: '010', name: 'Juliana Ramos', stars: 2, endereco: 'Rua do Lago, 753', dataHora: '2024-09-10 15:50', status: 'Cancelado' }
+]
