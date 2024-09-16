@@ -50,5 +50,10 @@
     overflow-x: scroll;
 }
 
+.nav-vermelha {
+    background-color: red;
+    color: white;
+}
+
 
     

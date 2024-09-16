@@ -1,12 +1,12 @@
 // script.js
-import {mockData} from './mock.js';
+import {produtosTabela} from './mock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const table = document.getElementById('tabela-produtos');
     const headers = table.querySelectorAll('th');
     let sortDirection = {};
 
-    populateTable(mockData);
+    populateTable(produtosTabela);
 
     headers.forEach(header => {
         header.addEventListener('click', () => {

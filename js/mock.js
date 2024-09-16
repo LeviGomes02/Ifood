@@ -108,7 +108,7 @@ export const pagamentos = [
   {
     transacao: "#876234",
     valor: "R$ 80,00",
-    data: "14/06/2024",
+    data: "15/06/2024",
     formaDePagamentos:
       '<img src="../images/imagem-pagamentos/cartao.jpeg" class="banco-icon" alt=""> Cartão de Crédito',
     status: "Em Andamento",
@@ -805,7 +805,7 @@ export const dadosRelatorios = [
 ];
 
 // Produtos
-export const mockData = [
+export const produtosTabela = [
   { codigo: '001', nome: 'Bourbon BBQ Deluxe', avaliacao: 5, preco: 'R$ 29,90', vendidos: 2472 },
   { codigo: '002', nome: 'Batatas Apimentadas', avaliacao: 4.5, preco: 'R$ 14,90', vendidos: 1291 },
   { codigo: '003', nome: 'Chocolate Heaven', avaliacao: 5, preco: 'R$ 19,90', vendidos: 2151 },
@@ -845,4 +845,47 @@ export const dadosEntregas = [
   { id: '008', name: 'Paula Mendes', stars: 3, endereco: 'Avenida das Palmeiras, 258', dataHora: '2024-09-11 08:00', status: 'Concluído' },
   { id: '009', name: 'Ricardo Costa', stars: 5, endereco: 'Rua das Árvores, 369', dataHora: '2024-09-15 17:25', status: 'Em Andamento' },
   { id: '010', name: 'Juliana Ramos', stars: 2, endereco: 'Rua do Lago, 753', dataHora: '2024-09-10 15:50', status: 'Cancelado' }
+]
+
+// Pedidos
+export const cardPedidos = [
+  { categoria: "Total de Pedidos", quantidade: 32, classe: "card-custom" },
+  { categoria: "Pedidos Entregues", quantidade: 20, classe: "card-entregue" },
+  { categoria: "Pedidos em Andamento", quantidade: 5, classe: "card-andamento" },
+  { categoria: "Pedidos Cancelados", quantidade: 7, classe: "card-cancelado" }
+];
+
+export const tabelaPedidos = [
+  { numero: '032', produto: 'Bourbon BBQ Deluxe', valor: 'R$ 29,90', pagamento: 'Cartão de Crédito', entregador: 'Ricardo Costa', status: 'Pendente', dataHora: '15/09/2024 22:45' },
+  { numero: '031', produto: 'Suco de Laranja', valor: 'R$ 8,90', pagamento: 'Cartão de Débito', entregador: 'João da Silva', status: 'Pendente', dataHora: '15/09/2024 22:40' },
+  { numero: '030', produto: 'Batatas Apimentadas', valor: 'R$ 14,90', pagamento: 'Dinheiro', entregador: 'João da Silva', status: 'Pendente', dataHora: '15/09/2024 22:37' },
+  { numero: '029', produto: 'Milkshake de Chocolate', valor: 'R$ 15,90', pagamento: 'Cartão de Crédito', entregador: 'Ana Clara', status: 'Pendente', dataHora: '15/09/2024 22:35' },
+  { numero: '028', produto: 'Milkshake de Morango', valor: 'R$ 15,90', pagamento: 'Dinheiro', entregador: 'Ricardo Costa', status: 'Pendente', dataHora: '15/09/2024 22:30' },
+  { numero: '027', produto: 'Chocolate Heaven', valor: 'R$ 19,90', pagamento: 'Cartão de Débito', entregador: 'Ana Clara', status: 'Entregue', dataHora: '15/09/2024 22:00' },
+  { numero: '026', produto: 'King Mont Bacon', valor: 'R$ 24,90', pagamento: 'Cartão de Crédito', entregador: 'Ricardo Costa', status: 'Entregue', dataHora: '15/09/2024 21:50' },
+  { numero: '025', produto: 'Classic Cheeseburger', valor: 'R$ 22,90', pagamento: 'Dinheiro', entregador: 'Maria Souza', status: 'Cancelado', dataHora: '15/09/2024 21:30' },
+  { numero: '024', produto: 'Bacon Burger', valor: 'R$ 26,90', pagamento: 'Cartão de Débito', entregador: 'Carlos Pereira', status: 'Entregue', dataHora: '15/09/2024 20:52' },
+  { numero: '023', produto: 'Veggie Burger', valor: 'R$ 21,90', pagamento: 'Cartão de Crédito', entregador: 'Ricardo Costa', status: 'Entregue', dataHora: '15/09/2024 20:45' },
+  { numero: '021', produto: 'BBQ Pulled Pork Sandwich', valor: 'R$ 27,90', pagamento: 'Dinheiro', entregador: 'João da Silva', status: 'Cancelado', dataHora: '15/09/2024 20:30' },
+  { numero: '020', produto: 'Spicy Chicken Burger', valor: 'R$ 24,90', pagamento: 'Cartão de Débito', entregador: 'Ana Clara', status: 'Cancelado', dataHora: '15/09/2024 20:15' },
+  { numero: '019', produto: 'Truffle Burger', valor: 'R$ 34,90', pagamento: 'Cartão de Crédito', entregador: 'Ricardo Costa', status: 'Entregue', dataHora: '15/09/2024 19:40' },
+  { numero: '018', produto: 'Truffle Burger', valor: 'R$ 34,90', pagamento: 'Pix', entregador: 'Paula Mendes', status: 'Entregue', dataHora: '15/09/2024 19:55' },
+  { numero: '017', produto: 'Buffalo Chicken Wings', valor: 'R$ 19,90', pagamento: 'Dinheiro', entregador: 'João da Silva', status: 'Entregue', dataHora: '15/09/2024 19:33' },
+  { numero: '016', produto: 'Onion Rings', valor: 'R$ 12,90', pagamento: 'Cartão de Débito', entregador: 'Maria Souza', status: 'Cancelado', dataHora: '15/09/2024 19:30' },
+  { numero: '016', produto: 'Chá Gelado', valor: 'R$ 7,90', pagamento: 'Cartão de Débito', entregador: 'João da Silva', status: 'Entregue', dataHora: '15/09/2024 19:15' },
+  { numero: '015', produto: 'Sweet Potato Fries', valor: 'R$ 14,90', pagamento: 'Cartão de Crédito', entregador: 'Carlos Pereira', status: 'Entregue', dataHora: '15/09/2024 18:45' },
+  { numero: '014', produto: 'Mac and Cheese', valor: 'R$ 22,90', pagamento: 'Dinheiro', entregador: 'Ricardo Costa', status: 'Entregue', dataHora: '15/09/2024 18:00' },
+  { numero: '013', produto: 'Batata Frita', valor: 'R$ 12,90', pagamento: 'Cartão de Crédito', entregador: 'Ana Clara', status: 'Entregue', dataHora: '15/09/2024 17:34' },
+  { numero: '012', produto: 'Classic Caesar Salad', valor: 'R$ 18,90', pagamento: 'Cartão de Débito', entregador: 'João da Silva', status: 'Cancelado', dataHora: '15/09/2024 17:00' },
+  { numero: '011', produto: 'Coca-Cola', valor: 'R$ 5,90', pagamento: 'Cartão de Crédito', entregador: 'Ana Clara', status: 'Entregue', dataHora: '15/09/2024 16:30' },
+  { numero: '010', produto: 'Bourbon BBQ Deluxe', valor: 'R$ 29,90', pagamento: 'Pix', entregador: 'Fernando Lima', status: 'Entregue', dataHora: '15/09/2024 16:00' },
+  { numero: '009', produto: 'Batatas Apimentadas', valor: 'R$ 14,90', pagamento: 'Cartão de Débito', entregador: 'Lucas Oliveira', status: 'Entregue', dataHora: '15/09/2024 13:30' },
+  { numero: '008', produto: 'Chocolate Heaven', valor: 'R$ 19,90', pagamento: 'Pix', entregador: 'Paula Mendes', status: 'Entregue', dataHora: '15/09/2024 12:15' },
+  { numero: '007', produto: 'King Mont Bacon', valor: 'R$ 24,90', pagamento: 'Pix', entregador: 'Fernando Lima', status: 'Cancelado', dataHora: '15/09/2024 12:00' },
+  { numero: '006', produto: 'Classic Cheeseburger', valor: 'R$ 22,90', pagamento: 'Pix', entregador: 'Lucas Oliveira', status: 'Entregue', dataHora: '15/09/2024 11:45' },
+  { numero: '005', produto: 'Bacon Burger', valor: 'R$ 26,90', pagamento: 'Pix', entregador: 'Paula Mendes', status: 'Entregue', dataHora: '15/09/2024 11:30' },
+  { numero: '004', produto: 'Veggie Burger', valor: 'R$ 21,90', pagamento: 'Dinheiro', entregador: 'Juliana Ramos', status: 'Entregue', dataHora: '15/09/2024 11:15' },
+  { numero: '003', produto: 'BBQ Pulled Pork Sandwich', valor: 'R$ 27,90', pagamento: 'Pix', entregador: 'Fernando Lima', status: 'Entregue', dataHora: '15/09/2024 10:50' },
+  { numero: '002', produto: 'Spicy Chicken Burger', valor: 'R$ 24,90', pagamento: 'Pix', entregador: 'Lucas Oliveira', status: 'Entregue', dataHora: '15/09/2024 10:45' },
+  { numero: '001', produto: 'Sprite', valor: 'R$ 5,90', pagamento: 'Dinheiro', entregador: 'Ricardo Costa', status: 'Cancelado', dataHora: '15/09/2024 10:15' }
 ]
