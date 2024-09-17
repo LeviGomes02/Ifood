@@ -57,20 +57,44 @@ const tableBody = document.querySelector('tbody');
 
 dadosEntregas.forEach(item => {
   const row = document.createElement('tr');
-  
+
+  // Determine the color based on status
+  let statusColor;
+  switch (item.status) {
+    case 'Pendente':
+      statusColor = '#ffc107'; // Cor do text-warning (laranja)
+      break;
+    case 'Em Andamento':
+      statusColor = '#007bff'; // Azul mais escuro
+      break;
+    case 'Concluído':
+      statusColor = 'green'; // Verde para Concluído
+      break;
+    case 'Cancelado':
+      statusColor = 'red'; // Vermelho para Cancelado
+      break;
+    default:
+      statusColor = 'black'; // Cor padrão se o status for desconhecido
+  }
+
+  // Determine the rating display
+  const ratingDisplay = item.status === 'Concluído' 
+    ? `<p class="text-warning">
+         ${'<i class="bi bi-star-fill"></i>'.repeat(item.stars)}
+         ${'<i class="bi bi-star"></i>'.repeat(5 - item.stars)}
+       </p>`
+    : ' - ';
+
   row.innerHTML = `
     <td>${item.id}</td>
+    <td>${item.produto}</td>
     <td>${item.name}</td>
-    <td>
-      <p class="text-warning">
-        ${'<i class="bi bi-star-fill"></i>'.repeat(item.stars)}
-        ${'<i class="bi bi-star"></i>'.repeat(5 - item.stars)}
-      </p>
-    </td>
+    <td>${ratingDisplay}</td>
     <td>${item.endereco}</td>
     <td>${item.dataHora}</td>
-    <td>${item.status}</td>
+    <td style="color: ${statusColor};">${item.status}</td>
   `;
   
   tableBody.appendChild(row);
 });
+

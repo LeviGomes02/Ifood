@@ -85,7 +85,8 @@
                 Produtos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link opcoes-navbar custom-active" href="#"><i class="bi bi-cart-check-fill"></i> Entregas</a>
+              <a class="nav-link opcoes-navbar custom-active" href="#"><i class="bi bi-cart-check-fill"></i>
+                Entregas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bell-fill"></i> Notificações</a>
@@ -106,33 +107,277 @@
     <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center mt-3 gap-2">
       <!-- Os cards de entregadores serão gerados aqui dinamicamente -->
     </div>
-  
 
-    <div class="container mt-5">
+    <h6 class="text-center mt-5">Entregas:</h6>
+
+    <div class="container ">
       <div class="d-flex justify-content-between mx-auto mt-5">
-        <button type="button" class="btn btn-danger">Gerenciar Entregador</button>
+        <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal"
+          data-bs-target="#modalGerenciarEntregador">
+          <i class="bi bi-person-fill-gear"></i> Gerenciar Entregador
+        </button>
+        <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal"
+          data-bs-target="#modalGerenciarEntregador">
+          <i class="bi bi-person-fill-gear"></i>
+        </button>
+
         <div class="d-flex gap-2">
-          <button type="button" class="btn btn-danger"><i class="bi bi-plus-lg"></i> Adicionar Entrega</button>
-          <button type="button" class="btn btn-danger">Editar Entrega</button>
-          <button type="button" class="btn btn-danger"><i class="bi bi-dash-lg"></i> Remover Entrega</button>
+          <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal"
+            data-bs-target="#modalAdicionar">
+            <i class="bi bi-plus-lg"></i> Adicionar
+          </button>
+          <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal" data-bs-target="#modalEditarPedido">
+            <i class="bi bi-gear-fill"></i> Editar
+          </button>
+          <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal"
+            data-bs-target="#modalRemover">
+            <i class="bi bi-dash-lg"></i> Remover
+          </button>
+
+          <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal"
+            data-bs-target="#modalAdicionar">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+          <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal" data-bs-target="#modalEditarPedido">
+            <i class="bi bi-gear-fill"></i>
+          </button>
+          <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal"
+            data-bs-target="#modalRemover">
+            <i class="bi bi-dash-lg"></i>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="container overflow-auto">
+    <!-- Modal Adicionar -->
+    <div class="modal fade" id="modalAdicionar" tabindex="-1" aria-labelledby="modalAdicionarLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAdicionarLabel">Adicionar Entrega</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formAdicionar">
+              <div class="mb-3">
+                <label for="produto" class="form-label">Produto</label>
+                <input type="text" class="form-control" id="produto" required>
+              </div>
+              <div class="mb-3">
+                <label for="entregador" class="form-label">Entregador</label>
+                <input type="text" class="form-control" id="entregador" required>
+              </div>
+              <div class="mb-3">
+                <label for="endereco" class="form-label">Endereço de Entrega</label>
+                <input type="text" class="form-control" id="endereco" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-danger" id="btnAdicionar">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Remover -->
+    <div class="modal fade" id="modalRemover" tabindex="-1" aria-labelledby="modalRemoverLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRemoverLabel">Remover Entrega</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formRemover">
+              <div class="mb-3">
+                <label for="produtoRemover" class="form-label">Produto</label>
+                <input type="text" class="form-control" id="produtoRemover" required>
+              </div>
+              <div class="mb-3">
+                <label for="entregadorRemover" class="form-label">Entregador</label>
+                <input type="text" class="form-control" id="entregadorRemover" required>
+              </div>
+              <div class="mb-3">
+                <label for="enderecoRemover" class="form-label">Endereço de Entrega</label>
+                <input type="text" class="form-control" id="enderecoRemover" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-danger" id="btnRemover">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Modal Editar Pedido -->
+<div class="modal fade" id="modalEditarPedido" tabindex="-1" aria-labelledby="modalEditarPedidoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Cabeçalho do Modal -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditarPedidoLabel">Editar Pedido</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Corpo do Modal -->
+      <div class="modal-body">
+        <form>
+          <!-- Seção 1: Editar Pedido -->
+          <h6 class="text-danger">Informações do Pedido</h6>
+          <div class="mb-3">
+            <label for="produtoEditar" class="form-label">Produto</label>
+            <input type="text" class="form-control" id="produtoEditar" placeholder="Insira o nome do produto" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="entregadorEditar" class="form-label">Entregador</label>
+            <input type="text" class="form-control" id="entregadorEditar" placeholder="Insira o nome do entregador" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="enderecoEditar" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="enderecoEditar" placeholder="Insira o endereço de entrega" required>
+          </div>
+
+          <!-- Seção 2: Edição Detalhada -->
+          <h6 class="text-danger mt-4">Edição Detalhada</h6>
+          <div class="mb-3">
+            <label for="produtoEditarDetalhe" class="form-label">Editando Produto</label>
+            <input type="text" class="form-control" id="produtoEditarDetalhe" placeholder="Insira o nome do novo produto" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="entregadorEditarDetalhe" class="form-label">Editando Entregador</label>
+            <input type="text" class="form-control" id="entregadorEditarDetalhe" placeholder="Insira o novo entregador" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="enderecoEditarDetalhe" class="form-label">Editando Endereço</label>
+            <input type="text" class="form-control" id="enderecoEditarDetalhe" placeholder="Insira o novo endereço de entrega" required>
+          </div>
+        </form>
+      </div>
+
+      <!-- Rodapé do Modal -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-danger">Confirmar Alterações</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Modal Gerenciar Entregador -->
+    <div class="modal fade" id="modalGerenciarEntregador" tabindex="-1" aria-labelledby="gerenciarEntregadorLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gerenciarEntregadorLabel">Gerenciar Entregador</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Navegação entre abas para ações -->
+            <ul class="nav nav-tabs" id="gerenciarEntregadorTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="adicionar-tab" data-bs-toggle="tab" href="#adicionar" role="tab"
+                  aria-controls="adicionar" aria-selected="true">Adicionar</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="editar-tab" data-bs-toggle="tab" href="#editar" role="tab"
+                  aria-controls="editar" aria-selected="false">Editar</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="remover-tab" data-bs-toggle="tab" href="#remover" role="tab"
+                  aria-controls="remover" aria-selected="false">Remover</a>
+              </li>
+            </ul>
+
+            <!-- Conteúdo das abas -->
+            <div class="tab-content mt-3">
+              <!-- Adicionar Entregador -->
+              <div class="tab-pane fade show active" id="adicionar" role="tabpanel" aria-labelledby="adicionar-tab">
+                <form>
+                  <div class="mb-3">
+                    <label for="nomeAdicionar" class="form-label">Nome do Entregador</label>
+                    <input type="text" class="form-control" id="nomeAdicionar" placeholder="Insira o nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contatoAdicionar" class="form-label">Contato</label>
+                    <input type="text" class="form-control" id="contatoAdicionar" placeholder="Insira o contato"
+                      required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="veiculoAdicionar" class="form-label">Veículo</label>
+                    <input type="text" class="form-control" id="veiculoAdicionar" placeholder="Insira o veículo"
+                      required>
+                  </div>
+                  <button type="submit" class="btn btn-danger">Adicionar</button>
+                </form>
+              </div>
+
+              <!-- Editar Entregador -->
+              <div class="tab-pane fade" id="editar" role="tabpanel" aria-labelledby="editar-tab">
+                <form>
+                  <div class="mb-3">
+                    <label for="nomeEditar" class="form-label">Nome do Entregador</label>
+                    <input type="text" class="form-control" id="nomeEditar" placeholder="Insira o nome para editar"
+                      required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="contatoEditar" class="form-label">Novo Contato</label>
+                    <input type="text" class="form-control" id="contatoEditar" placeholder="Insira o novo contato"
+                      required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="veiculoEditar" class="form-label">Novo Veículo</label>
+                    <input type="text" class="form-control" id="veiculoEditar" placeholder="Insira o novo veículo"
+                      required>
+                  </div>
+                  <button type="submit" class="btn btn-danger">Confirmar Edição</button>
+                </form>
+              </div>
+
+              <!-- Remover Entregador -->
+              <div class="tab-pane fade" id="remover" role="tabpanel" aria-labelledby="remover-tab">
+                <form>
+                  <div class="mb-3">
+                    <label for="nomeRemover" class="form-label">Nome do Entregador</label>
+                    <input type="text" class="form-control" id="nomeRemover" placeholder="Insira o nome para remover"
+                      required>
+                  </div>
+                  <button type="submit" class="btn btn-danger">Remover</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="overflow-auto">
       <table id="tabela-produtos" class="table table-hover text-center mt-2 table-custom scroll">
         <thead>
           <tr>
-            <th id="codigo" class="escuro"><a href="#" class="text-danger">Código da Entrega</a></th>
-            <th id="nome"><a href="#" class="text-danger">Entregador</a></th>
-            <th id="preco"><a href="#" class="text-danger">Avaliação</a></th>
-            <th id="preco"><a href="#" class="text-danger">Endereço de Entrega</a></th>
-            <th id="vendidos"><a href="#" class="text-danger">Data/Hora da Saída</a></th>
-            <th id="avaliacao"><a href="#" class="text-danger">Status</a></th>
+            <th id="codigo" class="text-danger">Código da Entrega</th>
+            <th id="nome" class="text-danger">Produto</th>
+            <th id="nome" class="text-danger">Entregador</th>
+            <th id="preco" class="text-danger">Avaliação</th>
+            <th id="preco" class="text-danger">Endereço de Entrega</th>
+            <th id="vendidos" class="text-danger">Data/Hora da Saída</th>
+            <th id="avaliacao" class="text-danger">Status</th>
           </tr>
         </thead>
         <tbody>
-            <!-- código gerado pelo js -->
+          <!-- código gerado pelo js -->
         </tbody>
       </table>
     </div>
