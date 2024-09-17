@@ -29,25 +29,6 @@
         <h4>Gerenciador de Entregas</h4>
       </a>
 
-      <div class="d-none d-md-flex d-xl-flex w-50 w-md-100 bg-light ">
-        <input class="form-control red-shadow" type="search" placeholder="Procurar" aria-label="Search">
-        <button class="btn btn-outline-danger btn-custom" type="submit"><i class="bi bi-search"></i></button>
-      </div>
-
-      <div class="d-none d-xl-block" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-        <label class="btn btn-danger btn-custom" for="btnradio1">Dia</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <label class="btn btn-danger btn-custom" for="btnradio2">Semana</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked="">
-        <label class="btn btn-danger btn-custom" for="btnradio3">Mês</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-        <label class="btn btn-danger btn-custom" for="btnradio4">Ano</label>
-      </div>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -118,129 +99,22 @@
     </div>
   </nav>
 
-  <main class="distancia">
+  <main class="distancia-custom">
     <div class="container d-flex justify-content-center">
-      <h4>Melhores Entregadores</h4>
+      <h6>Melhores Entregadores:</h6>
     </div>
-    <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center mt-5 gap-2 ">
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">Ricardo Costa</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
-              <h5 class="ms-2 mt-0">272</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
-              <h5 class="ms-5 mt-0">5</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">Lucas Oliveira</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
-              <h5 class="ms-2 mt-0">215</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
-              <h5 class="ms-5 mt-0">9</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-
-        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">Carlos Pereira</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
-              <h5 class="ms-2 mt-0">136</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
-              <h5 class="ms-5 mt-0">6</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-
-        <img class=" avatar " src="../images/imagem-entregas/avatar m.jpeg" alt="Foto do Entregador">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">João da Silva</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star"></i></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Entregas Concluídas</p>
-              <h5 class="ms-2 mt-0">121</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Entregas Não Concluídas</p>
-              <h5 class="ms-5 mt-0">14</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center mt-3 gap-2">
+      <!-- Os cards de entregadores serão gerados aqui dinamicamente -->
     </div>
+  
 
-    <div class="container my-2">
+    <div class="container mt-5">
       <div class="d-flex justify-content-between mx-auto mt-5">
-        <button type="button" class="btn btn-primary">Gerenciador de Entregador</button>
+        <button type="button" class="btn btn-danger">Gerenciar Entregador</button>
         <div class="d-flex gap-2">
-          <button type="button" class="btn btn-success">Adicionar Entrega</button>
-          <button type="button" class="btn btn-warning">Editar Entrega</button>
-          <button type="button" class="btn btn-danger">Remover Entrega</button>
+          <button type="button" class="btn btn-danger"><i class="bi bi-plus-lg"></i> Adicionar Entrega</button>
+          <button type="button" class="btn btn-danger">Editar Entrega</button>
+          <button type="button" class="btn btn-danger"><i class="bi bi-dash-lg"></i> Remover Entrega</button>
         </div>
       </div>
     </div>
@@ -258,7 +132,7 @@
           </tr>
         </thead>
         <tbody>
-
+            <!-- código gerado pelo js -->
         </tbody>
       </table>
     </div>

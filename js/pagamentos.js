@@ -71,7 +71,7 @@ function gerarDivsComDados() {
         const novaDiv = document.createElement('div');
         novaDiv.className = 'col-md-12 col-lg-6 col-xl-3 my-3';
         novaDiv.innerHTML = `
-            <div class="card">
+            <div class="card ${item.cardClasse}">
                 <div class="card-body p-1">
                     <p class="mb-0 my-1 ">${item.descricao}</p>
                     <h5>${item.valor}</h5>

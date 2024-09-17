@@ -31,10 +31,7 @@
                 <h4>Relatórios</h4>
             </a>
 
-            <div class="d-none d-md-flex d-xl-flex w-50 w-md-100 bg-light ">
-                <input class="form-control red-shadow" type="search" placeholder="Procurar" aria-label="Search">
-                <button class="btn btn-outline-danger btn-custom" type="submit"><i class="bi bi-search"></i></button>
-            </div>
+           
 
             <div class="d-none d-xl-block" role="group" aria-label="Basic radio toggle button group">
                 <input type="radio" class="btn-check" name="btnradio" id="btn-day" autocomplete="off">
@@ -124,14 +121,62 @@
     </nav>
 
     <main class="distancia">
+
         <div class="container div-relatorio rounded">
+            <h5 class="mt-2">Gerador de Relatórios</h5>
+        
+            <div class="d-flex flex-column flex-lg-row flex-xl-row">
+                <div>
+                    <div class="me-5">
+                        <label for="reportSelect" class="form-label">Relatório:</label>
+                        <select id="reportSelect" class="form-select btn-largura red-shadow" aria-label="Selecione uma opção">
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="pedidos">Pedidos</option>
+                            <option value="pagamentos">Pagamentos</option>
+                            <option value="entregas">Entregas</option>
+                            <option value="despesas">Despesas</option>
+                            <option value="pedidos-x-entregas">Pedidos x Entregas</option>
+                            <option value="pedidos-x-pagamentos">Pedidos x Pagamentos</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="d-flex mt-2 mt-lg-0 mt-xl-0 flex-wrap">
+                    <div class="mb-3 me-3 flex-grow-1">
+                        <label for="dataInicialGerador" class="form-label data-tamanho">Data inicial:</label>
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataInicialGerador">
+                    </div>
+                    <div class="mb-3 flex-grow-1">
+                        <label for="dataFinalGerador" class="form-label data-tamanho">Data final:</label>
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataFinalGerador">
+                    </div>
+                </div>
+            </div>
+        
+            <div>
+                <button class="btn btn-danger" id="emitir" type="button">Emitir</button>
+            </div>
+        
+            <div id="resultadoEmitido" class="mt-4">
+                <!-- Os resultados emitidos serão exibidos aqui -->
+            </div>
+        
+            <div class="d-flex">
+                <button class="btn btn-danger btn-limpar mb-2" id="limpar-gerador" type="button">Limpar</button>
+            </div>
+        </div>
+        
+
+
+
+        <div class="container div-relatorio rounded mt-5">
             <h5 class="mt-2">Histórico de Relatórios</h5>
 
             <div class="d-flex flex-column flex-lg-row flex-xl-row">
                 <div>
                     <div class="me-5">
                         <label for="reportSelect" class="form-label">Relatório:</label>
-                        <select id="reportSelect" class="form-select btn-largura red-shadow"
+                        <select id="btn-historico" class="form-select btn-largura red-shadow"
                             aria-label="Selecione uma opção">
                             <option value="" disabled selected>Selecione uma opção</option>
                             <option value="pedidos">Pedidos</option>
@@ -147,11 +192,11 @@
                 <div class="d-flex mt-2 mt-lg-0 mt-xl-0 flex-wrap">
                     <div class="mb-3 me-3 flex-grow-1">
                         <label for="dataInicial" class="form-label data-tamanho">Data inicial:</label>
-                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataInicial">
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataInicialHistorico">
                     </div>
                     <div class="mb-3 flex-grow-1">
                         <label for="dataFinal" class="form-label data-tamanho">Data final:</label>
-                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataFinal">
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataFinalHistorico">
                     </div>
                 </div>
             </div>
@@ -160,13 +205,13 @@
                 <button class="btn btn-danger" id="procurar" type="button">Procurar</button>
             </div>
 
-            <div id="resultadoContainer" class="mt-4">
+            <div id="resultadoHistorico" class="mt-4">
                 <!-- Os resultados filtrados serão exibidos aqui -->
             </div>
 
-            <div class="d-flex"></div>
-            <button class="btn btn-danger btn-limpar mb-2" id="limpar" type="button">Limpar</button>
-        </div>
+            <div class="d-flex">
+                <button class="btn btn-danger btn-limpar mb-2" id="limpar-historico" type="button">Limpar</button>
+            </div>
 
     </main>
 
@@ -176,3 +221,4 @@
 </body>
 
 </html>
+

@@ -1,5 +1,98 @@
 // script.js
 import {produtosTabela} from './mock.js';
+import { produtosCards } from './mock.js';
+
+
+function gerarEstrelas(estrelas) {
+    let estrelasHtml = '';
+    for (let i = 1; i <= 5; i++) {
+      if (i <= Math.floor(estrelas)) {
+        estrelasHtml += '<i class="bi bi-star-fill"></i>';
+      } else if (i === Math.ceil(estrelas) && estrelas % 1 !== 0) {
+        estrelasHtml += '<i class="bi bi-star-half"></i>';
+      } else {
+        estrelasHtml += '<i class="bi bi-star"></i>';
+      }
+    }
+    return estrelasHtml;
+  }
+  
+  function gerarCards() {
+    const container = document.getElementById("produtos-cards");
+    container.innerHTML = ""; // Limpa o container
+  
+    produtosCards.forEach(produto => {
+      const card = document.createElement("div");
+      card.classList.add("d-flex", "col-12", "col-lg-5", "col-xl-5", "cards-produtos", "rounded");
+  
+      card.innerHTML = `
+        <img src="${produto.imagem}" alt="${produto.alt}">
+        <div class="d-column">
+          <div class="d-flex">
+            <h5 class="ms-2">${produto.nome}</h5>
+            <div class="d-flex ms-3 estrelas">
+              ${gerarEstrelas(produto.estrelas)}
+            </div>
+          </div>
+          <div class="d-flex">
+            <div>
+              <p class="fonte-pequena ms-2 mb-0 text-success">Unidades Vendidas</p>
+              <h5 class="ms-2 mt-0">${produto.unidadesVendidas}</h5>
+            </div>
+            <div>
+              <p class="fonte-pequena ms-5 mb-0 text-danger">Preço</p>
+              <h5 class="ms-5 mt-0">${produto.preco}</h5>
+            </div>
+          </div>
+        </div>
+      `;
+  
+      container.appendChild(card);
+    });
+  }
+  
+  document.addEventListener("DOMContentLoaded", gerarCards);
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnCadastrar = document.getElementById('btnCadastrar');
+    const btnRemover = document.getElementById('btnRemover');
+  
+    btnCadastrar.addEventListener('click', () => {
+      const nomeProduto = document.getElementById('nomeProduto').value;
+      const precoProduto = document.getElementById('precoProduto').value;
+  
+      if (nomeProduto && precoProduto) {
+        // Aqui você pode adicionar a lógica para adicionar o produto à tabela
+        console.log(`Produto adicionado: ${nomeProduto}, Preço: ${precoProduto}`);
+  
+        // Fechar o modal após adicionar
+        const modalAdicionar = new bootstrap.Modal(document.getElementById('modalAdicionar'));
+        modalAdicionar.hide();
+      } else {
+        alert('Preencha todos os campos para adicionar o produto.');
+      }
+    });
+  
+    btnRemover.addEventListener('click', () => {
+      const nomeProdutoRemover = document.getElementById('nomeProdutoRemover').value;
+  
+      if (nomeProdutoRemover) {
+        // Aqui você pode adicionar a lógica para remover o produto da tabela
+        console.log(`Produto removido: ${nomeProdutoRemover}`);
+  
+        // Fechar o modal após remover
+        const modalRemover = new bootstrap.Modal(document.getElementById('modalRemover'));
+        modalRemover.hide();
+      } else {
+        alert('Preencha o nome do produto para removê-lo.');
+      }
+    });
+  });
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const table = document.getElementById('tabela-produtos');

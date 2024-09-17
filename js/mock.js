@@ -14,31 +14,31 @@ export const dadosTabela = [
 ];
 
 export const dadosCards = [
-  { title: "Dinheiro em Caixa", value: "R$ 162.532,64" },
-  { title: "Disponível para Saque", value: "R$ 142.865,23" },
-  { title: "Aguardando Liberação", value: "R$ 19.667,41" },
-  { title: "Estornos e Cancelamentos", value: "R$ 835,10" },
+  { title: "Dinheiro em Caixa", value: "162.532,64" },
+  { title: "Disponível para Saque", value: "142.865,23" },
+  { title: "Aguardando Liberação", value: "19.667,41" },
+  { title: "Estornos e Cancelamentos", value: "835,10" },
   {
     title: "Vendas",
-    value: "R$ 57.731,46",
+    value: "57.731,46",
     percentage: "+24%",
     percentageClass: "text-success",
   },
   {
     title: "Faturamentos",
-    value: "R$ 37.235,23",
+    value: "37.235,23",
     percentage: "+17%",
     percentageClass: "text-success",
   },
   {
     title: "Despesas",
-    value: "R$ 20.496,23",
+    value: "20.496,23",
     percentage: "-11%",
     percentageClass: "text-danger",
   },
   {
     title: "Ticket Médio Pedido",
-    value: "R$ 146.52",
+    value: "146.52",
     percentage: "+14%",
     percentageClass: "text-success",
   },
@@ -66,7 +66,7 @@ export const produtosMaisPedidos = [
     estrela3: '<i class="bi bi-star-fill"></i>',
     estrela4: '<i class="bi bi-star-fill"></i>',
     estrela5: '<i class="bi bi-star-fill"></i>',
-    unidadesVendidas: 2151,
+    unidadesVendidas: 2455,
     preco: "R$ 47,90",
   },
   {
@@ -78,7 +78,7 @@ export const produtosMaisPedidos = [
     estrela3: '<i class="bi bi-star-fill"></i>',
     estrela4: '<i class="bi bi-star-fill"></i>',
     estrela5: '<i class="bi bi-star-half"></i>',
-    unidadesVendidas: 1436,
+    unidadesVendidas: 2410,
     preco: "R$ 62,90",
   },
   {
@@ -90,7 +90,7 @@ export const produtosMaisPedidos = [
     estrela3: '<i class="bi bi-star-fill"></i>',
     estrela4: '<i class="bi bi-star-fill"></i>',
     estrela5: '<i class="bi bi-star"></i>',
-    unidadesVendidas: 1291,
+    unidadesVendidas: 2380,
     preco: "R$ 42,90",
   },
 ];
@@ -100,7 +100,7 @@ export const pagamentos = [
   {
     transacao: "#876364",
     valor: "R$ 120,00",
-    data: "13/06/2024",
+    data: "15/06/2024",
     formaDePagamentos:
       '<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
     status: "Concluída",
@@ -108,7 +108,7 @@ export const pagamentos = [
   {
     transacao: "#876234",
     valor: "R$ 80,00",
-    data: "15/06/2024",
+    data: "13/06/2024",
     formaDePagamentos:
       '<img src="../images/imagem-pagamentos/cartao.jpeg" class="banco-icon" alt=""> Cartão de Crédito',
     status: "Em Andamento",
@@ -183,10 +183,10 @@ export const pagamentos = [
 ];
 
 export const cardsPagamentos = [
-  { descricao: "Valor Vendido", valor: "R$ 903,43" },
-  { descricao: "Valor Recebido", valor: "R$ 541,43" },
-  { descricao: "Taxa Ifood", valor: "R$ 271,00" },
-  { descricao: "Estornos", valor: "R$ 91,00" },
+  { descricao: "Valor Vendido", valor: "R$ 903,43", cardClasse: "card-vendido"},
+  { descricao: "Valor Recebido", valor: "R$ 541,43", cardClasse: "card-recibido"},
+  { descricao: "Taxa Ifood", valor: "R$ 271,00", cardClasse: "card-taxa"},
+  { descricao: "Estornos", valor: "R$ 91,00", cardClasse: "card-estorno "},
 ];
 
 // Relatórios
@@ -805,11 +805,46 @@ export const dadosRelatorios = [
 ];
 
 // Produtos
+export const produtosCards = [
+  {
+    nome: "Bourbon BBQ Deluxe",
+    imagem: "../images/imagem-dashboard/hamburger.png",
+    alt: "Um grande hambúrger com duas carnes dentro",
+    unidadesVendidas: 2455,
+    preco: "29,90",
+    estrelas: 5
+  },
+  {
+    nome: "Chocolate Heaven",
+    imagem: "../images/imagem-dashboard/milkshake.png",
+    alt: "Um copo de vidro com milkshake de chocolate",
+    unidadesVendidas: 2455,
+    preco: "19,90",
+    estrelas: 5
+  },
+  {
+    nome: "King Mont Bacon",
+    imagem: "../images/imagem-dashboard/x-bacon.png",
+    alt: "Um grande hambúrguer de bacon",
+    unidadesVendidas: 2410,
+    preco: "24,90",
+    estrelas: 4.5
+  },
+  {
+    nome: "Batatas Apimentadas",
+    imagem: "../images/imagem-dashboard/batatas.png",
+    alt: "",
+    unidadesVendidas: 2380,
+    preco: "14,90",
+    estrelas: 4
+  }
+];
+
 export const produtosTabela = [
   { codigo: '001', nome: 'Bourbon BBQ Deluxe', avaliacao: 5, preco: 'R$ 29,90', vendidos: 2472 },
-  { codigo: '002', nome: 'Batatas Apimentadas', avaliacao: 4.5, preco: 'R$ 14,90', vendidos: 1291 },
-  { codigo: '003', nome: 'Chocolate Heaven', avaliacao: 5, preco: 'R$ 19,90', vendidos: 2151 },
-  { codigo: '004', nome: 'King Mont Bacon', avaliacao: 4, preco: 'R$ 24,90', vendidos: 1436 },
+  { codigo: '002', nome: 'Batatas Apimentadas', avaliacao: 4.5, preco: 'R$ 14,90', vendidos: 2380 },
+  { codigo: '003', nome: 'Chocolate Heaven', avaliacao: 5, preco: 'R$ 19,90', vendidos: 2455 },
+  { codigo: '004', nome: 'King Mont Bacon', avaliacao: 4, preco: 'R$ 24,90', vendidos: 2410 },
   { codigo: '005', nome: 'Classic Cheeseburger', avaliacao: 3.5, preco: 'R$ 22,90', vendidos: 1987 },
   { codigo: '006', nome: 'Bacon Burger', avaliacao: 4.5, preco: 'R$ 26,90', vendidos: 1743 },
   { codigo: '007', nome: 'Veggie Burger', avaliacao: 3, preco: 'R$ 21,90', vendidos: 1428 },
@@ -834,6 +869,41 @@ export const produtosTabela = [
 ];
 
 // Entregas
+export const entregadoresCards = [
+  {
+    nome: "Ricardo Costa",
+    imagem: "../images/imagem-entregas/avatar m.jpeg",
+    alt: "Foto do Entregador",
+    estrelas: 5,
+    entregasConcluidas: 272,
+    entregasNaoConcluidas: 5
+  },
+  {
+    nome: "Lucas Oliveira",
+    imagem: "../images/imagem-entregas/avatar m.jpeg",
+    alt: "Foto do Entregador",
+    estrelas: 4.5,
+    entregasConcluidas: 215,
+    entregasNaoConcluidas: 9
+  },
+  {
+    nome: "Carlos Pereira",
+    imagem: "../images/imagem-entregas/avatar m.jpeg",
+    alt: "Foto do Entregador",
+    estrelas: 4.5,
+    entregasConcluidas: 136,
+    entregasNaoConcluidas: 6
+  },
+  {
+    nome: "João da Silva",
+    imagem: "../images/imagem-entregas/avatar m.jpeg",
+    alt: "Foto do Entregador",
+    estrelas: 4,
+    entregasConcluidas: 121,
+    entregasNaoConcluidas: 14
+  }
+];
+
 export const dadosEntregas = [
   { id: '001', name: 'Ricardo Costa', stars: 5, endereco: 'Rua das Flores, 123', dataHora: '2024-09-15 14:30', status: 'Em Andamento' },
   { id: '002', name: 'João da Silva', stars: 4, endereco: 'Avenida Central, 456', dataHora: '2024-09-12 09:15', status: 'Concluído' },

@@ -25,6 +25,22 @@
     font-weight: bold;
 }
 
+.card-vendido {
+    border-left: 4px solid #F6A600;
+}
+
+.card-recibido {
+    border-left: 4px solid #28a745;
+}
+
+.card-taxa {
+    border-left: 4px solid #ffc107;
+}
+
+.card-estorno {
+    border-left: 4px solid #dc3545;
+}
+
 .banco-icon {
     width: 15px;
     height: 15px;

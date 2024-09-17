@@ -99,126 +99,77 @@
     </div>
   </nav>
 
-  <main class="distancia">
+  <main class="distancia-custom">
 
+    <h6 class="text-center">Produtos mais Vendidos:</h6>
 
-    <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center mt-5 gap-2 ">
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-        <img src="../images/imagem-dashboard/hamburger.png" alt="Um grande hambúrger com duas carnes dentro">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">Bourbon BBQ Deluxe</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Unidades Vendidas</p>
-              <h5 class="ms-2 mt-0">2472</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Preço</p>
-              <h5 class="ms-5 mt-0">29,90</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-
-        <img src="../images/imagem-dashboard/milkshake.png" alt="Um copo de vidro com milkshake de chocolate">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">Chocolate Heaven</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Unidades Vendidas</p>
-              <h5 class="ms-2 mt-0">2151</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Preço</p>
-              <h5 class="ms-5 mt-0">19,90</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-
-        <img src="../images/imagem-dashboard/x-bacon.png" alt="Um grande hambúrguer de bacon">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">King Mont Bacon</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Unidades Vendidas</p>
-              <h5 class="ms-2 mt-0">1436</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Preço</p>
-              <h5 class="ms-5 mt-0">24,90</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="d-flex col-12 col-lg-5 col-xl-5 cards-produtos rounded ">
-
-        <img src="../images/imagem-dashboard/batatas.png" alt="">
-        <div class="d-column">
-          <div class="d-flex">
-            <h5 class="ms-2">Batatas Apimentadas</h5>
-            <div class="d-flex ms-3 estrelas">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star"></i></i>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div>
-              <p class="fonte-pequena ms-2 mb-0 text-success">Unidades Vendidas</p>
-              <h5 class="ms-2 mt-0">1291</h5>
-            </div>
-            <div>
-              <p class="fonte-pequena ms-5 mb-0 text-danger">Preço</p>
-              <h5 class="ms-5 mt-0">14,90</h5>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+    <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center gap-2">
+      <!-- código gerando pelo js -->
     </div>
 
+    <div class="d-flex container mt-5">
+  <div class="d-flex gap-2 mx-auto">
+    <button class="btn btn-danger btn-produtos col-5 w-50" type="button" data-bs-toggle="modal" data-bs-target="#modalAdicionar">
+      <i class="bi bi-plus-lg"></i> Adicionar
+    </button>
+    <button class="btn btn-danger btn-produtos col-5 w-50" type="button" data-bs-toggle="modal" data-bs-target="#modalRemover">
+      <i class="bi bi-dash-lg"></i> Remover
+    </button>
+  </div>
+    </div>
+
+    <!-- Modal Adicionar -->
+    <div class="modal fade" id="modalAdicionar" tabindex="-1" aria-labelledby="modalAdicionarLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAdicionarLabel">Adicionar Produto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formAdicionar">
+          <div class="mb-3">
+            <label for="nomeProduto" class="form-label">Nome do Produto</label>
+            <input type="text" class="form-control" id="nomeProduto" required>
+          </div>
+          <div class="mb-3">
+            <label for="precoProduto" class="form-label">Preço</label>
+            <input type="text" class="form-control" id="precoProduto" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-danger btn-produtos" id="btnCadastrar">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <!-- Modal Remover -->
+    <div class="modal fade" id="modalRemover" tabindex="-1" aria-labelledby="modalRemoverLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalRemoverLabel">Remover Produto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formRemover">
+          <div class="mb-3">
+            <label for="nomeProdutoRemover" class="form-label">Nome do Produto</label>
+            <input type="text" class="form-control" id="nomeProdutoRemover" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-danger btn-produtos" id="btnRemover">Remover</button>
+      </div>
+    </div>
+  </div>
+    </div>
+    
     <div class="container overflow-auto">
-      <table id="tabela-produtos" class="table table-hover text-center mt-5 table-custom scroll">
+      <table id="tabela-produtos" class="table table-hover mt-3 text-center table-custom scroll">
         <thead>
           <tr>
             <th id="codigo" class="escuro"><a href="#" class="text-danger">Código</a></th>
@@ -232,15 +183,6 @@
           <!-- codigo gerado pelo js -->
         </tbody>
       </table>
-    </div>
-
-    <div class="container my-2">
-      <div class="d-flex gap-2 mx-auto">
-        <button class="btn btn-danger btn-produtos col-5 w-50" type="button"><i class="bi bi-plus-lg"></i>
-          Adicionar</button>
-        <button class="btn btn-danger btn-produtos col-5 w-50" type="button"><i class="bi bi-dash-lg"></i>
-          Remover</button>
-      </div>
     </div>
 
     <script type="module" src="../js/produtos.js"></script>
