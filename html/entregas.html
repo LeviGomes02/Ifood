@@ -44,57 +44,63 @@
         </div>
 
         <div class="offcanvas-body">
+          <div class="d-flex flex-column h-100">
+            <ul class="navbar-nav flex-grow-1 pe-3 list-unstyled">
+              <div class="d-flex mb-4">
+                <img class="foto-perfil me-2" src="../images/imagem-nav/bistro-ouvidor.jpg" alt="">
+                <li class="navbar-item">
+                  <a class="nav-link negrito" aria-current="page" href="#">Bistrô do Hambúrguer</a>
+                  <p class="fonte-pequena">Conta Premium</p>
+                </li>
+              </div>
 
+              <div class="d-flex d-md-none d-xl-none w-200 bg-light m-2 mb-4 mx-auto">
+                <input class="form-control" type="search" placeholder="Procurar" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-search"></i></button>
+              </div>
 
-
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-            <div class="d-flex mb-4">
-              <img class="foto-perfil me-2" src="../images/imagem-nav/bistro-ouvidor.jpg" alt="">
-              <li class="navbar-item">
-                <a class="nav-link  negrito " aria-current="page" href="#">
-                  Bistrô do Hambúrguer</a>
-                <p class="fonte-pequena mt-0">Conta Premium</p>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar" aria-current="page" href="../index.html"><i
+                    class="bi bi-grid-fill"></i> Dashboard</a>
               </li>
-            </div>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar" href="./relatorios.html"><i
+                    class="bi bi-file-earmark-bar-graph-fill"></i> Relatórios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar" href="./pedidos.html"><i class="bi bi-bag-plus-fill"></i> Pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar" href="./pagamentos.html"><i class="bi bi-credit-card-2-back-fill"></i>
+                  Pagamentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar" href="./produtos.html"><i class="bi bi-box-seam-fill"></i>
+                  Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar custom-active" href="#"><i class="bi bi-cart-check-fill"></i>
+                  Entregas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bell-fill"></i>
+                  Notificações</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-gear-fill"></i>
+                  Configurações</a>
+              </li>
+            </ul>
 
-            <div class="d-flex d-md-none d-xl-none w-200 bg-light m-2 mb-4 mx-auto">
-              <input class="form-control" type="search" placeholder="Procurar" aria-label="Search">
-              <button class="btn btn-outline-danger" type="submit"><i class="bi bi-search"></i></button>
+            <div class="mt-auto">
+              <ul class="list-unstyled">
+                <li class="nav-item">
+                  <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-box-arrow-in-left"></i>
+                    Sair</a>
+                </li>
+              </ul>
             </div>
-
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar " aria-current="page" href="../index.html"><i
-                  class="bi bi-grid-fill"></i>
-                Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar" href="./relatorios.html"><i
-                  class="bi bi-file-earmark-bar-graph-fill"></i>
-                Relatórios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar" href="./pedidos.html"><i class="bi bi-bag-plus-fill"></i> Pedidos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar" href="./pagamentos.html"><i class="bi bi-credit-card-2-back-fill"></i>
-                Pagamentos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar" href="./produtos.html"><i class="bi bi-box-seam-fill"></i>
-                Produtos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar custom-active" href="#"><i class="bi bi-cart-check-fill"></i>
-                Entregas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-bell-fill"></i> Notificações</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link opcoes-navbar" href="#"><i class="bi bi-gear-fill"></i> Configurações</a>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -105,43 +111,45 @@
       <h6>Melhores Entregadores:</h6>
     </div>
     <div id="produtos-cards" class="container d-flex flex-wrap justify-content-center mt-3 gap-2">
-      <!-- Os cards de entregadores serão gerados aqui dinamicamente -->
+      <!-- código gerado pelo js -->
     </div>
 
     <h6 class="text-center mt-5">Entregas:</h6>
 
     <div class="container ">
-      <div class="d-flex justify-content-between mx-auto mt-5">
-        <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal"
+      <div class="d-flex justify-content-between mx-auto mt-2">
+        <button type="button" class="btn btn-danger btn-vermelho d-none d-lg-block d-xl-block" data-bs-toggle="modal"
           data-bs-target="#modalGerenciarEntregador">
           <i class="bi bi-person-fill-gear"></i> Gerenciar Entregador
         </button>
-        <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal"
+        <button type="button" class="btn btn-danger btn-vermelho d-block d-lg-none d-xl-none" data-bs-toggle="modal"
           data-bs-target="#modalGerenciarEntregador">
           <i class="bi bi-person-fill-gear"></i>
         </button>
 
         <div class="d-flex gap-2">
-          <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal"
+          <button type="button" class="btn btn-danger btn-vermelho d-none d-lg-block d-xl-block" data-bs-toggle="modal"
             data-bs-target="#modalAdicionar">
             <i class="bi bi-plus-lg"></i> Adicionar
           </button>
-          <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal" data-bs-target="#modalEditarPedido">
+          <button type="button" class="btn btn-danger btn-vermelho d-none d-lg-block d-xl-block" data-bs-toggle="modal"
+            data-bs-target="#modalEditarPedido">
             <i class="bi bi-gear-fill"></i> Editar
           </button>
-          <button type="button" class="btn btn-danger d-none d-lg-block d-xl-block" data-bs-toggle="modal"
+          <button type="button" class="btn btn-danger btn-vermelho d-none d-lg-block d-xl-block" data-bs-toggle="modal"
             data-bs-target="#modalRemover">
             <i class="bi bi-dash-lg"></i> Remover
           </button>
 
-          <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal"
+          <button type="button" class="btn btn-danger btn-vermelho d-block d-lg-none d-xl-none" data-bs-toggle="modal"
             data-bs-target="#modalAdicionar">
             <i class="bi bi-plus-lg"></i>
           </button>
-          <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal" data-bs-target="#modalEditarPedido">
+          <button type="button" class="btn btn-danger btn-vermelho d-block d-lg-none d-xl-none" data-bs-toggle="modal"
+            data-bs-target="#modalEditarPedido">
             <i class="bi bi-gear-fill"></i>
           </button>
-          <button type="button" class="btn btn-danger d-block d-lg-none d-xl-none" data-bs-toggle="modal"
+          <button type="button" class="btn btn-danger btn-vermelho d-block d-lg-none d-xl-none" data-bs-toggle="modal"
             data-bs-target="#modalRemover">
             <i class="bi bi-dash-lg"></i>
           </button>
@@ -174,7 +182,7 @@
             </form>
           </div>
           <div class="modal-footer d-flex justify-content-center">
-            <button type="button" class="btn btn-danger" id="btnAdicionar">Adicionar</button>
+            <button type="button" class="btn btn-danger btn-vermelho" id="btnAdicionar">Adicionar</button>
           </div>
         </div>
       </div>
@@ -205,69 +213,76 @@
             </form>
           </div>
           <div class="modal-footer d-flex justify-content-center">
-            <button type="button" class="btn btn-danger" id="btnRemover">Remover</button>
+            <button type="button" class="btn btn-danger btn-vermelho" id="btnRemover">Remover</button>
           </div>
         </div>
       </div>
     </div>
 
-  <!-- Modal Editar Pedido -->
-<div class="modal fade" id="modalEditarPedido" tabindex="-1" aria-labelledby="modalEditarPedidoLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <!-- Cabeçalho do Modal -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalEditarPedidoLabel">Editar Pedido</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+    <!-- Modal Editar Pedido -->
+    <div class="modal fade" id="modalEditarPedido" tabindex="-1" aria-labelledby="modalEditarPedidoLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
 
-      <!-- Corpo do Modal -->
-      <div class="modal-body">
-        <form>
-          <!-- Seção 1: Editar Pedido -->
-          <h6 class="text-danger">Informações do Pedido</h6>
-          <div class="mb-3">
-            <label for="produtoEditar" class="form-label">Produto</label>
-            <input type="text" class="form-control" id="produtoEditar" placeholder="Insira o nome do produto" required>
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalEditarPedidoLabel">Editar Pedido</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
 
-          <div class="mb-3">
-            <label for="entregadorEditar" class="form-label">Entregador</label>
-            <input type="text" class="form-control" id="entregadorEditar" placeholder="Insira o nome do entregador" required>
+
+          <div class="modal-body">
+            <form>
+
+              <h6 class="text-danger">Informações do Pedido</h6>
+              <div class="mb-3">
+                <label for="produtoEditar" class="form-label">Produto</label>
+                <input type="text" class="form-control" id="produtoEditar" placeholder="Insira o nome do produto"
+                  required>
+              </div>
+
+              <div class="mb-3">
+                <label for="entregadorEditar" class="form-label">Entregador</label>
+                <input type="text" class="form-control" id="entregadorEditar" placeholder="Insira o nome do entregador"
+                  required>
+              </div>
+
+              <div class="mb-3">
+                <label for="enderecoEditar" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="enderecoEditar" placeholder="Insira o endereço de entrega"
+                  required>
+              </div>
+
+
+              <h6 class="text-danger mt-4">Edição Detalhada</h6>
+              <div class="mb-3">
+                <label for="produtoEditarDetalhe" class="form-label">Editando Produto</label>
+                <input type="text" class="form-control" id="produtoEditarDetalhe"
+                  placeholder="Insira o nome do novo produto" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="entregadorEditarDetalhe" class="form-label">Editando Entregador</label>
+                <input type="text" class="form-control" id="entregadorEditarDetalhe"
+                  placeholder="Insira o novo entregador" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="enderecoEditarDetalhe" class="form-label">Editando Endereço</label>
+                <input type="text" class="form-control" id="enderecoEditarDetalhe"
+                  placeholder="Insira o novo endereço de entrega" required>
+              </div>
+            </form>
           </div>
 
-          <div class="mb-3">
-            <label for="enderecoEditar" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="enderecoEditar" placeholder="Insira o endereço de entrega" required>
-          </div>
 
-          <!-- Seção 2: Edição Detalhada -->
-          <h6 class="text-danger mt-4">Edição Detalhada</h6>
-          <div class="mb-3">
-            <label for="produtoEditarDetalhe" class="form-label">Editando Produto</label>
-            <input type="text" class="form-control" id="produtoEditarDetalhe" placeholder="Insira o nome do novo produto" required>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-danger btn-vermelho">Confirmar Alterações</button>
           </div>
-
-          <div class="mb-3">
-            <label for="entregadorEditarDetalhe" class="form-label">Editando Entregador</label>
-            <input type="text" class="form-control" id="entregadorEditarDetalhe" placeholder="Insira o novo entregador" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="enderecoEditarDetalhe" class="form-label">Editando Endereço</label>
-            <input type="text" class="form-control" id="enderecoEditarDetalhe" placeholder="Insira o novo endereço de entrega" required>
-          </div>
-        </form>
-      </div>
-
-      <!-- Rodapé do Modal -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-danger">Confirmar Alterações</button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 
     <!-- Modal Gerenciar Entregador -->
@@ -280,7 +295,6 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <!-- Navegação entre abas para ações -->
             <ul class="nav nav-tabs" id="gerenciarEntregadorTabs" role="tablist">
               <li class="nav-item" role="presentation">
                 <a class="nav-link active" id="adicionar-tab" data-bs-toggle="tab" href="#adicionar" role="tab"
@@ -295,10 +309,7 @@
                   aria-controls="remover" aria-selected="false">Remover</a>
               </li>
             </ul>
-
-            <!-- Conteúdo das abas -->
             <div class="tab-content mt-3">
-              <!-- Adicionar Entregador -->
               <div class="tab-pane fade show active" id="adicionar" role="tabpanel" aria-labelledby="adicionar-tab">
                 <form>
                   <div class="mb-3">
@@ -315,11 +326,9 @@
                     <input type="text" class="form-control" id="veiculoAdicionar" placeholder="Insira o veículo"
                       required>
                   </div>
-                  <button type="submit" class="btn btn-danger">Adicionar</button>
+                  <button type="submit" class="btn btn-danger btn-vermelho">Adicionar</button>
                 </form>
               </div>
-
-              <!-- Editar Entregador -->
               <div class="tab-pane fade" id="editar" role="tabpanel" aria-labelledby="editar-tab">
                 <form>
                   <div class="mb-3">
@@ -337,11 +346,9 @@
                     <input type="text" class="form-control" id="veiculoEditar" placeholder="Insira o novo veículo"
                       required>
                   </div>
-                  <button type="submit" class="btn btn-danger">Confirmar Edição</button>
+                  <button type="submit" class="btn btn-danger btn-vermelho">Confirmar Edição</button>
                 </form>
               </div>
-
-              <!-- Remover Entregador -->
               <div class="tab-pane fade" id="remover" role="tabpanel" aria-labelledby="remover-tab">
                 <form>
                   <div class="mb-3">
@@ -349,7 +356,7 @@
                     <input type="text" class="form-control" id="nomeRemover" placeholder="Insira o nome para remover"
                       required>
                   </div>
-                  <button type="submit" class="btn btn-danger">Remover</button>
+                  <button type="submit" class="btn btn-danger btn-vermelho">Remover</button>
                 </form>
               </div>
             </div>

@@ -22,14 +22,14 @@ document.getElementById('procurar').addEventListener('click', function () {
         return;
     }
 
-    // Filtrar os dados por tipo de relatório e intervalo de data
+
     const dadosFiltrados = dadosRelatorios.filter(item => {
         return item.tipo === tipoRelatorio &&
             item.data1 >= dataInicialHistorico &&
             item.data2 <= dataFinalHistorico;
     });
 
-    // Exibir os resultados
+
     const resultadoHistorico = document.getElementById('resultadoHistorico');
     resultadoHistorico.innerHTML = ''; // Limpa os resultados anteriores
 
@@ -75,8 +75,8 @@ document.getElementById('procurar').addEventListener('click', function () {
 
 document.getElementById('limpar-historico').addEventListener('click', function () {
     const resultadoHistorico = document.getElementById('resultadoHistorico');
-    resultadoHistorico.innerHTML = ''; // Limpa os resultados
-    this.style.display = 'none'; // Esconde o botão "Limpar"
+    resultadoHistorico.innerHTML = ''; 
+    this.style.display = 'none'; 
 });
 
 document.getElementById('btn-day').addEventListener('click', function () {

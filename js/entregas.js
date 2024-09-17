@@ -62,22 +62,22 @@ dadosEntregas.forEach(item => {
   let statusColor;
   switch (item.status) {
     case 'Pendente':
-      statusColor = '#ffc107'; // Cor do text-warning (laranja)
+      statusColor = '#ffc107';
       break;
     case 'Em Andamento':
-      statusColor = '#007bff'; // Azul mais escuro
+      statusColor = '#007bff'; 
       break;
     case 'Concluído':
-      statusColor = 'green'; // Verde para Concluído
+      statusColor = 'green'; 
       break;
     case 'Cancelado':
-      statusColor = 'red'; // Vermelho para Cancelado
+      statusColor = 'red'; 
       break;
     default:
-      statusColor = 'black'; // Cor padrão se o status for desconhecido
+      statusColor = 'black'; 
   }
 
-  // Determine the rating display
+  
   const ratingDisplay = item.status === 'Concluído' 
     ? `<p class="text-warning">
          ${'<i class="bi bi-star-fill"></i>'.repeat(item.stars)}

@@ -65,10 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const precoProduto = document.getElementById('precoProduto').value;
   
       if (nomeProduto && precoProduto) {
-        // Aqui você pode adicionar a lógica para adicionar o produto à tabela
         console.log(`Produto adicionado: ${nomeProduto}, Preço: ${precoProduto}`);
   
-        // Fechar o modal após adicionar
         const modalAdicionar = new bootstrap.Modal(document.getElementById('modalAdicionar'));
         modalAdicionar.hide();
       } else {
@@ -80,10 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const nomeProdutoRemover = document.getElementById('nomeProdutoRemover').value;
   
       if (nomeProdutoRemover) {
-        // Aqui você pode adicionar a lógica para remover o produto da tabela
+
         console.log(`Produto removido: ${nomeProdutoRemover}`);
   
-        // Fechar o modal após remover
+
         const modalRemover = new bootstrap.Modal(document.getElementById('modalRemover'));
         modalRemover.hide();
       } else {

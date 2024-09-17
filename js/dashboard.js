@@ -185,7 +185,7 @@ function gerarProdutosMaisPedidos() {
           </div>
       `;
 
-      container.appendChild(produtoDiv); // Adiciona o produto ao contêiner
+      container.appendChild(produtoDiv); 
   });
 }
 

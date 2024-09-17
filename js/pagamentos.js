@@ -22,7 +22,7 @@ function preencherTabela() {
               <td>
                 <input class="form-check-input rounded-0 " type="checkbox" value="" id="flexCheckDefault">
               </td>
-              <td class="escuro">${item.transacao}</td>
+              <td>${item.id}</td>
               <td>${item.valor}</td>
               <td class="">R$ ${valorTaxaIfood.toFixed(2)}</td>
               <td>R$ ${valorLiquido.toFixed(2)}</td>
