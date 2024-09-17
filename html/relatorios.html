@@ -11,6 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="../images/imagem-nav/icone-ifood-sorriso-quadrado-vermelho-png.png"
+        type="image/x-icon">
 
     <title>Backoffice-Relatórios</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -31,7 +33,7 @@
                 <h4>Relatórios</h4>
             </a>
 
-           
+
 
             <div class="d-none d-xl-block" role="group" aria-label="Basic radio toggle button group">
                 <input type="radio" class="btn-check" name="btnradio" id="btn-day" autocomplete="off">
@@ -130,12 +132,13 @@
 
         <div class="container div-relatorio rounded">
             <h5 class="mt-2">Gerador de Relatórios</h5>
-        
+
             <div class="d-flex flex-column flex-lg-row flex-xl-row">
                 <div>
                     <div class="me-5">
                         <label for="reportSelect" class="form-label">Relatório:</label>
-                        <select id="reportSelect" class="form-select btn-largura red-shadow" aria-label="Selecione uma opção">
+                        <select id="reportSelect" class="form-select btn-largura red-shadow"
+                            aria-label="Selecione uma opção">
                             <option value="" disabled selected>Selecione uma opção</option>
                             <option value="pedidos">Pedidos</option>
                             <option value="pagamentos">Pagamentos</option>
@@ -146,32 +149,34 @@
                         </select>
                     </div>
                 </div>
-        
+
                 <div class="d-flex mt-2 mt-lg-0 mt-xl-0 flex-wrap">
                     <div class="mb-3 me-3 flex-grow-1">
                         <label for="dataInicialGerador" class="form-label data-tamanho">Data inicial:</label>
-                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataInicialGerador">
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura"
+                            id="dataInicialGerador">
                     </div>
                     <div class="mb-3 flex-grow-1">
                         <label for="dataFinalGerador" class="form-label data-tamanho">Data final:</label>
-                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataFinalGerador">
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura"
+                            id="dataFinalGerador">
                     </div>
                 </div>
             </div>
-        
+
             <div>
                 <button class="btn btn-danger" id="emitir" type="button">Emitir</button>
             </div>
-        
+
             <div id="resultadoEmitido" class="mt-4">
                 <!-- Os resultados emitidos serão exibidos aqui -->
             </div>
-        
+
             <div class="d-flex">
                 <button class="btn btn-danger btn-limpar mb-2" id="limpar-gerador" type="button">Limpar</button>
             </div>
         </div>
-        
+
 
 
 
@@ -198,11 +203,13 @@
                 <div class="d-flex mt-2 mt-lg-0 mt-xl-0 flex-wrap">
                     <div class="mb-3 me-3 flex-grow-1">
                         <label for="dataInicial" class="form-label data-tamanho">Data inicial:</label>
-                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataInicialHistorico">
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura"
+                            id="dataInicialHistorico">
                     </div>
                     <div class="mb-3 flex-grow-1">
                         <label for="dataFinal" class="form-label data-tamanho">Data final:</label>
-                        <input type="date" class="form-control data-tamanho red-shadow input-largura" id="dataFinalHistorico">
+                        <input type="date" class="form-control data-tamanho red-shadow input-largura"
+                            id="dataFinalHistorico">
                     </div>
                 </div>
             </div>
@@ -227,4 +234,3 @@
 </body>
 
 </html>
-
