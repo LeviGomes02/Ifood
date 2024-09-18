@@ -47,7 +47,7 @@ export const dadosCards = [
 export const produtosMaisPedidos = [
   {
     nome: "Bourbon BBQ Deluxe",
-    imagem: "./images/imagem-dashboard/hamburger.png",
+    imagem: "../images/imagem-dashboard/hamburger.png",
     descricaoImagem: "Um grande hambúrger com duas carnes dentro",
     estrela2: '<i class="bi bi-star-fill"></i>',
     estrela1: '<i class="bi bi-star-fill"></i>',
@@ -59,7 +59,7 @@ export const produtosMaisPedidos = [
   },
   {
     nome: "Chocolate Heaven",
-    imagem: "./images/imagem-dashboard/milkshake.png",
+    imagem: "../images/imagem-dashboard/milkshake.png",
     descricaoImagem: "Um copo de vidro com milkshake de chocolate",
     estrela2: '<i class="bi bi-star-fill"></i>',
     estrela1: '<i class="bi bi-star-fill"></i>',
@@ -71,7 +71,7 @@ export const produtosMaisPedidos = [
   },
   {
     nome: "King Mont Bacon",
-    imagem: "./images/imagem-dashboard/x-bacon.png",
+    imagem: "../images/imagem-dashboard/x-bacon.png",
     descricaoImagem: "Um grande hambúrguer de bacon",
     estrela2: '<i class="bi bi-star-fill"></i>',
     estrela1: '<i class="bi bi-star-fill"></i>',
@@ -83,7 +83,7 @@ export const produtosMaisPedidos = [
   },
   {
     nome: "Batatas Apimentadas",
-    imagem: "./images/imagem-dashboard/batatas.png",
+    imagem: "../images/imagem-dashboard/batatas.png",
     descricaoImagem: "Uma porção de batatas fritas",
     estrela2: '<i class="bi bi-star-fill"></i>',
     estrela1: '<i class="bi bi-star-fill"></i>',
@@ -102,7 +102,7 @@ export const pagamentos = [
     valor: "R$ 120,00",
     data: "15/09/2024",
     formaDePagamentos:
-      '<img src="../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
+      '<img src=".../images/imagem-pagamentos/pix.jpeg" class="banco-icon" alt=""> Pix',
     status: "Concluída",
   },
   {
