@@ -905,16 +905,16 @@ export const entregadoresCards = [
 ];
 
 export const dadosEntregas = [
-  { id: '032', produto: 'Bourbon BBQ Deluxe', name: 'Ricardo Costa', stars: 5, endereco: 'Rua das Flores, 123', dataHora: '-', status: 'Pendente' },
-  { id: '031', produto: 'Suco de Laranja', name: 'João da Silva', stars: 4, endereco: 'Avenida Central, 456', dataHora: '-', status: 'Pendente' },
-  { id: '030', produto: 'Batatas Apimentadas', name: 'Maria Souza', stars: 3, endereco: 'Praça das Águas, 789', dataHora: '15/09/2024 22:42', status: 'Em Andamento' },
-  { id: '029', produto: 'Milkshake de Chocolate', name: 'Carlos Pereira', stars: 4, endereco: 'Rua dos Pássaros, 321', dataHora: '15/09/2024 22:40', status: 'Em Andamento' },
-  { id: '028', produto: 'Milkshake de Morango', name: 'Ana Clara', stars: 3, endereco: 'Rua do Sol, 654', dataHora: '15/09/2024 22:36', status: 'Em Andamento' },
-  { id: '027', produto: 'Chocolate Heaven', name: 'Fernando Lima', stars: 4, endereco: 'Avenida dos Ventos, 987', dataHora: '15/09/2024 22:05', status: 'Concluído' },
-  { id: '026', produto: 'King Mont Bacon', name: 'Lucas Oliveira', stars: 4, endereco: 'Rua das Pedras, 147', dataHora: '15/09/2024 21:59', status: 'Concluído' },
-  { id: '025', produto: 'Classic Cheeseburger', name: 'Paula Mendes', stars: 5, endereco: 'Avenida das Palmeiras, 258', dataHora: '15/09/2024 21:38', status: 'Concluído' },
-  { id: '024', produto: 'Bacon Burger', name: 'Ricardo Costa', stars: 0, endereco: 'Rua das Árvores, 369', dataHora: '15/09/2024 21:00', status: 'Cancelado' },
-  { id: '023', produto: 'Veggie Burger', name: 'Juliana Ramos', stars: 3, endereco: 'Rua do Lago, 753', dataHora: '15/09/2024 20:50', status: 'Concluído' }
+  { id: '072', produto: '35 -34', name: 'Ricardo Costa', stars: 5, endereco: 'Rua das Flores, 123', dataHora: '-', status: 'Pendente' },
+  { id: '071', produto: '33 - 32', name: 'João da Silva', stars: 4, endereco: 'Avenida Central, 456', dataHora: '-', status: 'Pendente' },
+  { id: '070', produto: '31', name: 'Maria Souza', stars: 3, endereco: 'Praça das Águas, 789', dataHora: '15/09/2024 22:42', status: 'Em Andamento' },
+  { id: '069', produto: '30', name: 'Carlos Pereira', stars: 4, endereco: 'Rua dos Pássaros, 321', dataHora: '15/09/2024 22:40', status: 'Em Andamento' },
+  { id: '068', produto: '29 - 28', name: 'Ana Clara', stars: 3, endereco: 'Rua do Sol, 654', dataHora: '15/09/2024 22:36', status: 'Em Andamento' },
+  { id: '067', produto: '27 - 26', name: 'Fernando Lima', stars: 4, endereco: 'Avenida dos Ventos, 987', dataHora: '15/09/2024 22:05', status: 'Concluído' },
+  { id: '066', produto: '25', name: 'Lucas Oliveira', stars: 4, endereco: 'Rua das Pedras, 147', dataHora: '15/09/2024 21:59', status: 'Concluído' },
+  { id: '065', produto: '24 - 23 - 22', name: 'Paula Mendes', stars: 5, endereco: 'Avenida das Palmeiras, 258', dataHora: '15/09/2024 21:38', status: 'Concluído' },
+  { id: '064', produto: '21', name: 'Ricardo Costa', stars: 0, endereco: 'Rua das Árvores, 369', dataHora: '15/09/2024 21:00', status: 'Cancelado' },
+  { id: '063', produto: '20', name: 'Juliana Ramos', stars: 3, endereco: 'Rua do Lago, 753', dataHora: '15/09/2024 20:50', status: 'Concluído' }
 ]
 
 // Pedidos
