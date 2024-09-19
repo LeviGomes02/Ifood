@@ -931,13 +931,13 @@ export const tabelaPedidos = [
   { numero: '030', produto: 'Batatas Apimentadas', valor: 'R$ 14,90', pagamento: 'Dinheiro', entregador: 'João da Silva', status: 'Pendente', dataHora: '15/09/2024 22:37' },
   { numero: '029', produto: 'Milkshake de Chocolate', valor: 'R$ 15,90', pagamento: 'Cartão de Crédito', entregador: 'Ana Clara', status: 'Pendente', dataHora: '15/09/2024 22:35' },
   { numero: '028', produto: 'Milkshake de Morango', valor: 'R$ 15,90', pagamento: 'Dinheiro', entregador: 'Ricardo Costa', status: 'Pendente', dataHora: '15/09/2024 22:30' },
-  { numero: '027', produto: 'Chocolate Heaven', valor: 'R$ 19,90', pagamento: 'Cartão de Débito', entregador: 'Ana Clara', status: 'Entregue', dataHora: '15/09/2024 22:00' },
+  { numero: '027', produto: 'Chocolate Heaven', valor: 'R$ 19,90', pagamento: 'Cartão de Débito', entregador: 'Ana Clara', status: 'Cancelado', dataHora: '15/09/2024 22:00' },
   { numero: '026', produto: 'King Mont Bacon', valor: 'R$ 24,90', pagamento: 'Cartão de Crédito', entregador: 'Ricardo Costa', status: 'Entregue', dataHora: '15/09/2024 21:50' },
   { numero: '025', produto: 'Classic Cheeseburger', valor: 'R$ 22,90', pagamento: 'Dinheiro', entregador: 'Maria Souza', status: 'Entregue', dataHora: '15/09/2024 21:30' },
   { numero: '024', produto: 'Bacon Burger', valor: 'R$ 26,90', pagamento: 'Cartão de Débito', entregador: 'Carlos Pereira', status: 'Cancelado', dataHora: '15/09/2024 20:52' },
   { numero: '023', produto: 'Veggie Burger', valor: 'R$ 21,90', pagamento: 'Cartão de Crédito', entregador: 'Ricardo Costa', status: 'Entregue', dataHora: '15/09/2024 20:45' },
-  { numero: '021', produto: 'BBQ Pulled Pork Sandwich', valor: 'R$ 27,90', pagamento: 'Dinheiro', entregador: 'João da Silva', status: 'Cancelado', dataHora: '15/09/2024 20:30' },
-  { numero: '020', produto: 'Spicy Chicken Burger', valor: 'R$ 24,90', pagamento: 'Cartão de Débito', entregador: 'Ana Clara', status: 'Etregue', dataHora: '15/09/2024 20:15' },
+  { numero: '021', produto: 'BBQ Pulled Pork Sandwich', valor: 'R$ 27,90', pagamento: 'Dinheiro', entregador: 'João da Silva', status: 'Entregue', dataHora: '15/09/2024 20:30' },
+  { numero: '020', produto: 'Spicy Chicken Burger', valor: 'R$ 24,90', pagamento: 'Cartão de Débito', entregador: 'Ana Clara', status: 'Entregue', dataHora: '15/09/2024 20:15' },
   { numero: '019', produto: 'Truffle Burger', valor: 'R$ 34,90', pagamento: 'Cartão de Crédito', entregador: 'Ricardo Costa', status: 'Entregue', dataHora: '15/09/2024 19:40' },
   { numero: '018', produto: 'Truffle Burger', valor: 'R$ 34,90', pagamento: 'Pix', entregador: 'Paula Mendes', status: 'Entregue', dataHora: '15/09/2024 19:55' },
   { numero: '017', produto: 'Buffalo Chicken Wings', valor: 'R$ 19,90', pagamento: 'Dinheiro', entregador: 'João da Silva', status: 'Entregue', dataHora: '15/09/2024 19:33' },
@@ -959,3 +959,35 @@ export const tabelaPedidos = [
   { numero: '002', produto: 'Spicy Chicken Burger', valor: 'R$ 24,90', pagamento: 'Pix', entregador: 'Lucas Oliveira', status: 'Entregue', dataHora: '15/09/2024 10:45' },
   { numero: '001', produto: 'Sprite', valor: 'R$ 5,90', pagamento: 'Dinheiro', entregador: 'Ricardo Costa', status: 'Cancelado', dataHora: '15/09/2024 10:15' }
 ]
+
+// Notificações
+export const notificacaoRelatorio = [
+  { numero: 399, relatorio: 'Pedido x Entregas', data: '12/09/2024', status: 'Concluído' },
+  { numero: 398, relatorio: 'Pedido x Pagamentos', data: '12/09/2024', status: 'Concluído' },
+  { numero: 403, relatorio: 'Pedidos', data: '15/09/2024', status: 'Emitido' },
+  { numero: 402, relatorio: 'Pagamento', data: '15/09/2024', status: 'Emitido' },
+  { numero: 401, relatorio: 'Entregas', data: '15/09/2024', status: 'Emitido' },
+  { numero: 400, relatorio: 'Despesas', data: '14/09/2024', status: 'Emitido' },
+  { numero: 399, relatorio: 'Pedido x Entregas', data: '12/09/2024', status: 'Emitido' },
+  { numero: 398, relatorio: 'Pedido x Pagamentos', data: '12/09/2024', status: 'Emitido' }
+];
+
+export const notificacaoPagamento = [
+  {produto: 'Bourbon BBQ Deluxe', valor: '29,90', dataHora: '15/09/2024 22:45', status: 'Realizado'},
+  {produto: 'Suco de Laranja', valor: '8,90', dataHora: '15/09/2024 22:40', status: 'Realizado'},
+  {produto: 'Batatas Apimentadas', valor: '14,90', dataHora: '15/09/2024 22:37', status: 'Realizado'},
+  {produto: 'Milkshake de Chocolate', valor: '15,90', dataHora: '15/09/2024 22:35', status: 'Realizado'},
+  {produto: 'Milkshake de Morango', valor: '15,90', dataHora: '15/09/2024 22:30', status: 'Realizado'},
+  {produto: 'Chocolate Heaven', valor: '19,90', dataHora: '15/09/2024 22:00', status: 'Estornado'},
+  {produto: 'Chocolate Heaven', valor: '19,90', dataHora: '15/09/2024 21:50', status: 'Realizado'}
+];
+
+export const notificacaoEntrega = [
+  {numero: "31", endereco: "Praça das Águas, 789", dataHora: "15/09/2024 22:42", status: "Entrega a Caminho"},
+  {numero: "30", endereco: "Rua dos Pássaros, 321", dataHora: "15/09/2024 22:40", status: "Entrega a Caminho"},
+  {numero: "29 - 28", endereco: "Rua do Sol, 654", dataHora: "15/09/2024 22:36", status: "Entrega a Caminho"},
+  {numero: "27 - 26", endereco: "Avenida dos Ventos, 987", dataHora: "15/09/2024 22:05", status: "Entrega Concluída"},
+  {numero: "25", endereco: "Rua das Pedras, 147", dataHora: "15/09/2024 21:59", status: "Entrega Concluída"},
+  {numero: "24 - 23 - 22", endereco: "Avenida das Palmeiras, 258", dataHora: "15/09/2024 21:38", status: "Entrega Concluída"},
+  {numero: "21", endereco: "Rua das Árvores, 369", dataHora: "15/09/2024 21:00", status: "Entrega Cancelada"}
+];
