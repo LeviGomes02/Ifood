@@ -8,3 +8,10 @@
     width: 15px;
 }
 
+.scroll {
+    overflow-x: scroll;
+}
+
+.table-custom {
+    min-width: 720px;
+}

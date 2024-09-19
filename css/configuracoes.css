@@ -1,0 +1,5 @@
+.container-custom {
+    border: 1px solid red;
+    box-shadow: 0 0 15px lightcoral;
+    max-width: 700px;
+}
